@@ -17,9 +17,24 @@ const mock_db = {
       last_name: 'Silva',
       avatar: '/public/assets/users/11.jpg',
       content:
-        "<p>📊 Comparing econometric methods for time series forecasting</p> <p>I'm trying to compare various econometric models for forecasting long-term financial trends.</p> <p>Would love to hear from anyone with experience in ARIMA, GARCH, or machine learning-based approaches.</p>",
+        "<p>📊 Comparing econometric methods for time series forecasting</p> <p>I'm trying to compare various econometric models for forecasting long-term financial trends.</p>",
       timestamp: '2025-01-28T09:15:00Z',
       likes: {},
+      replies: [
+        {
+          post_parent_id: 1,
+          reply_id: 1,
+          user_id: 10,
+          username: 'DrElenaPetrovic',
+          first_name: 'Elena',
+          last_name: 'Petrovic',
+          avatar: '/public/assets/users/10.jpg',
+          content:
+            "<p>Great topic! I've used ARIMA extensively in my research.</p> <p>Would you be interested in exploring hybrid approaches, such as combining ARIMA with LSTMs?</p>",
+          timestamp: '2025-01-28T11:15:00Z',
+          likes: {},
+        },
+      ],
     },
     '2': {
       post_id: 2,
@@ -29,9 +44,24 @@ const mock_db = {
       last_name: 'Petrovic',
       avatar: '/public/assets/users/10.jpg',
       content:
-        "<p>🖥️ Are neural-symbolic hybrid models the future of AI?</p> <p>I've been exploring neural-symbolic AI, which combines deep learning with logical reasoning.</p> <p>Do you think this approach has the potential to solve AI interpretability and reasoning problems, or will end-to-end deep learning continue to dominate?</p>",
+        "<p>🖥️ Are neural-symbolic hybrid models the future of AI?</p> <p>I've been exploring neural-symbolic AI, which combines deep learning with logical reasoning.</p>",
       timestamp: '2025-01-29T13:40:00Z',
       likes: {},
+      replies: [
+        {
+          post_parent_id: 2,
+          reply_id: 2,
+          user_id: 9,
+          username: 'ProfRahulDeshmukh',
+          first_name: 'Rahul',
+          last_name: 'Deshmukh',
+          avatar: '/public/assets/users/9.jpg',
+          content:
+            "<p>Interesting question! I've seen some promising work in integrating logic-based reasoning into deep learning models.</p> <p>Do you have any thoughts on how these hybrid models handle uncertainty?</p>",
+          timestamp: '2025-01-29T14:00:00Z',
+          likes: {},
+        },
+      ],
     },
     '3': {
       post_id: 3,
@@ -41,9 +71,24 @@ const mock_db = {
       last_name: 'Deshmukh',
       avatar: '/public/assets/users/9.jpg',
       content:
-        '<p>🔍 Looking for a dataset on global biodiversity loss</p> <p>I’m currently working on a large-scale meta-analysis of biodiversity trends over the past 50 years.</p> <p>Does anyone know where I can find high-quality, publicly available datasets related to biodiversity loss?</p>',
+        '<p>🔍 Looking for a dataset on global biodiversity loss</p> <p>I’m currently working on a large-scale meta-analysis of biodiversity trends over the past 50 years.</p>',
       timestamp: '2025-01-30T08:50:00Z',
       likes: {},
+      replies: [
+        {
+          post_parent_id: 3,
+          reply_id: 3,
+          user_id: 8,
+          username: 'DrTatianaOrlova',
+          first_name: 'Tatiana',
+          last_name: 'Orlova',
+          avatar: '/public/assets/users/8.jpg',
+          content:
+            '<p>I recommend checking out the Global Biodiversity Information Facility (GBIF).</p> <p>It provides a wealth of publicly available biodiversity data.</p>',
+          timestamp: '2025-01-30T09:20:00Z',
+          likes: {},
+        },
+      ],
     },
     '4': {
       post_id: 4,
@@ -53,9 +98,24 @@ const mock_db = {
       last_name: 'Orlova',
       avatar: '/public/assets/users/8.jpg',
       content:
-        '<p>📝 Challenges in translating research into policy</p> <p>As a social scientist working on public policy and climate adaptation, I often struggle with bridging the gap between academic findings and real-world implementation.</p> <p>How do you ensure your research influences policymakers effectively? Are there particular journals or outreach strategies that have worked for you?</p>',
+        '<p>📝 Challenges in translating research into policy</p> <p>How do you ensure your research influences policymakers effectively?</p>',
       timestamp: '2025-02-01T16:30:00Z',
       likes: {},
+      replies: [
+        {
+          post_parent_id: 4,
+          reply_id: 4,
+          user_id: 7,
+          username: 'ProfYusufAbdelaziz',
+          first_name: 'Yusuf',
+          last_name: 'Abdelaziz',
+          avatar: '/public/assets/users/7.jpg',
+          content:
+            '<p>One effective method is collaborating with policy think tanks.</p> <p>They help bridge the gap between research and policy implementation.</p>',
+          timestamp: '2025-02-01T18:10:00Z',
+          likes: {},
+        },
+      ],
     },
     '5': {
       post_id: 5,
@@ -65,9 +125,24 @@ const mock_db = {
       last_name: 'Abdelaziz',
       avatar: '/public/assets/users/7.jpg',
       content:
-        "<p>🎓 Tips for securing a postdoc in computational neuroscience?</p> <p>I'm currently finishing my PhD and looking for postdoctoral positions in computational neuroscience. Any advice on strong programs, funding opportunities, or application tips?</p>",
+        '<p>🎓 Tips for securing a postdoc in computational neuroscience?</p> <p>Any advice on strong programs, funding opportunities, or application tips?</p>',
       timestamp: '2025-02-02T10:55:00Z',
       likes: {},
+      replies: [
+        {
+          post_parent_id: 5,
+          reply_id: 5,
+          user_id: 6,
+          username: 'DrAnayaMendoza',
+          first_name: 'Anaya',
+          last_name: 'Mendoza',
+          avatar: '/public/assets/users/6.jpg',
+          content:
+            '<p>Look into the NIH and Marie Curie fellowships.</p> <p>They have great funding opportunities for neuroscience research.</p>',
+          timestamp: '2025-02-02T12:30:00Z',
+          likes: {},
+        },
+      ],
     },
     '6': {
       post_id: 6,
@@ -77,9 +152,24 @@ const mock_db = {
       last_name: 'Mendoza',
       avatar: '/public/assets/users/6.jpg',
       content:
-        "<p>📚 Best reference books for understanding nonlinear dynamics?</p> <p>I'm preparing a lecture series on nonlinear dynamical systems and need some high-quality resources.</p> <p>What are your go-to books for advanced topics in this field? I'm especially interested in resources that bridge physics and applied mathematics.</p>",
+        "<p>📚 Best reference books for understanding nonlinear dynamics?</p> <p>I'm preparing a lecture series and need some high-quality resources.</p>",
       timestamp: '2025-02-03T14:10:00Z',
       likes: {},
+      replies: [
+        {
+          post_parent_id: 6,
+          reply_id: 6,
+          user_id: 5,
+          username: 'DrKojiTanaka',
+          first_name: 'Koji',
+          last_name: 'Tanaka',
+          avatar: '/public/assets/users/5.jpg',
+          content:
+            "<p>Strogatz's 'Nonlinear Dynamics and Chaos' is an excellent choice.</p> <p>It's both comprehensive and beginner-friendly.</p>",
+          timestamp: '2025-02-03T15:45:00Z',
+          likes: {},
+        },
+      ],
     },
     '7': {
       post_id: 7,
@@ -89,9 +179,24 @@ const mock_db = {
       last_name: 'Tanaka',
       avatar: '/public/assets/users/5.jpg',
       content:
-        '<p>💡 Need help with Bayesian statistics in social sciences</p> <p>I’m working on a study analyzing <em>social behavior patterns</em> using Bayesian inference. However, I’m struggling with prior selection and Markov Chain Monte Carlo (MCMC) methods.</p> <p>Any experts in Bayesian modeling willing to provide guidance?</p>',
+        '<p>💡 Need help with Bayesian statistics in social sciences</p> <p>Any experts in Bayesian modeling willing to provide guidance?</p>',
       timestamp: '2025-02-04T17:20:00Z',
       likes: {},
+      replies: [
+        {
+          post_parent_id: 7,
+          reply_id: 7,
+          user_id: 4,
+          username: 'DrNaimaRahmani',
+          first_name: 'Naima',
+          last_name: 'Rahmani',
+          avatar: '/public/assets/users/4.jpg',
+          content:
+            '<p>I recommend using PyMC3 for Bayesian modeling.</p> <p>It has a great suite of tools for MCMC methods.</p>',
+          timestamp: '2025-02-04T18:00:00Z',
+          likes: {},
+        },
+      ],
     },
     '8': {
       post_id: 8,
@@ -104,6 +209,47 @@ const mock_db = {
         "<p>🔬 Breakthrough in Quantum Computing!</p> <p>My team has recently published a paper on error correction in quantum circuits. This could significantly improve the stability of quantum processors in real-world applications.</p> <p>Check out our findings here: <a href='#'>Quantum Error Correction Research</a>. Would love to hear feedback from fellow quantum researchers!</p>",
       timestamp: '2025-02-05T15:45:00Z',
       likes: {},
+      replies: [
+        {
+          post_parent_id: 8,
+          reply_id: 1,
+          user_id: 6,
+          username: 'DrAnayaMendoza',
+          first_name: 'Anaya',
+          last_name: 'Mendoza',
+          avatar: '/public/assets/users/6.jpg',
+          content:
+            "<p>Fascinating research, Dr. Rahmani! How does your approach compare with Shor's error correction algorithm?</p>",
+          timestamp: '2025-02-05T16:10:00Z',
+          likes: {},
+        },
+        {
+          post_parent_id: 8,
+          reply_id: 2,
+          user_id: 5,
+          username: 'DrKojiTanaka',
+          first_name: 'Koji',
+          last_name: 'Tanaka',
+          avatar: '/public/assets/users/5.jpg',
+          content:
+            "<p>I've been working on quantum noise reduction. Would love to collaborate and see if our methods could complement each other.</p>",
+          timestamp: '2025-02-05T16:30:00Z',
+          likes: {},
+        },
+        {
+          post_parent_id: 8,
+          reply_id: 3,
+          user_id: 10,
+          username: 'DrElenaPetrovic',
+          first_name: 'Elena',
+          last_name: 'Petrovic',
+          avatar: '/public/assets/users/10.jpg',
+          content:
+            '<p>Brilliant work! Have you considered testing this on a superconducting qubit architecture?</p>',
+          timestamp: '2025-02-05T17:05:00Z',
+          likes: {},
+        },
+      ],
     },
     '9': {
       post_id: 9,
@@ -116,6 +262,47 @@ const mock_db = {
         "<p>📢 What are the best practices for structuring a research proposal?</p> <p>I am mentoring graduate students who are drafting their first <em>research proposals</em>. What are some key elements that should be included? What resources do you recommend?</p> <p>For reference, I often suggest reading <a href='#'>this guide on proposal writing</a>, but I would love to hear insights from the community.</p>",
       timestamp: '2025-02-06T10:30:00Z',
       likes: {},
+      replies: [
+        {
+          post_parent_id: 9,
+          reply_id: 4,
+          user_id: 7,
+          username: 'ProfYusufAbdelaziz',
+          first_name: 'Yusuf',
+          last_name: 'Abdelaziz',
+          avatar: '/public/assets/users/7.jpg',
+          content:
+            "<p>Great question! One key element is a **clear problem statement**. If you can articulate the research problem in two concise sentences, you're on the right track.</p>",
+          timestamp: '2025-02-06T11:00:00Z',
+          likes: {},
+        },
+        {
+          post_parent_id: 9,
+          reply_id: 5,
+          user_id: 9,
+          username: 'ProfRahulDeshmukh',
+          first_name: 'Rahul',
+          last_name: 'Deshmukh',
+          avatar: '/public/assets/users/9.jpg',
+          content:
+            "<p>I'd recommend including a **strong methodology section** that explicitly outlines data collection and analysis techniques.</p>",
+          timestamp: '2025-02-06T11:20:00Z',
+          likes: {},
+        },
+        {
+          post_parent_id: 9,
+          reply_id: 6,
+          user_id: 4,
+          username: 'DrNaimaRahmani',
+          first_name: 'Naima',
+          last_name: 'Rahmani',
+          avatar: '/public/assets/users/4.jpg',
+          content:
+            '<p>Another tip: **Tie your proposal to existing research**. Showing that your study builds on prior work will make it more compelling.</p>',
+          timestamp: '2025-02-06T11:45:00Z',
+          likes: {},
+        },
+      ],
     },
     '10': {
       post_id: 10,
@@ -128,6 +315,7 @@ const mock_db = {
         "<p>🚀 Exciting opportunity for collaboration!</p> <p>I am currently conducting research on the application of machine learning in early cancer detection. Specifically, I am working with <em>convolutional neural networks (CNNs)</em> to analyze histopathological images for early signs of malignancy.</p> <p>I would love to connect with researchers who have experience with biomedical imaging, deep learning, or clinical applications. If you’re working on something similar, let’s discuss potential collaborations!</p> <p>📚 Reference Papers: <a href='#'>Deep Learning in Cancer Imaging</a></p>",
       timestamp: '2025-02-07T12:00:00Z',
       likes: {},
+      replies: [],
     },
   },
 }

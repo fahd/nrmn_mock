@@ -49,6 +49,8 @@ const CreatePostModal: React.FC<ModalProps> = ({ onClose, user }) => {
       post_id: nextPostId,
       content: postContent,
       timestamp: new Date().toISOString(),
+      replies: [],
+      likes: {},
     }
     addPost(newPost)
     onClose()
