@@ -45,7 +45,7 @@ const Post: React.FC<PostType> = ({
   user,
 }) => {
   return (
-    <div className="bg-white p-4 my-6 rounded-md border border-gray-200 align-center">
+    <div className="bg-white pt-4 px-6  my-6 rounded-md border border-gray-200 align-center">
       <div className="flex">
         <div>
           <img
@@ -88,8 +88,11 @@ const Post: React.FC<PostType> = ({
 
 const PostFeed: React.FC<PostFeedProps> = ({ posts, user }) => {
   const renderPosts = () => {
-    return posts.map((post, idx) => {
-      return <Post {...post} user={user} key={post.post_id} />
+    const postIds = Object.keys(posts).map(Number)
+    const lastIndex = postIds.length - 1
+    return postIds.map((_, i) => {
+      const postId = postIds[lastIndex - i]
+      return <Post key={postId} {...posts[postId]} />
     })
   }
   return <div>{renderPosts()}</div>

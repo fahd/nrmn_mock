@@ -1,5 +1,5 @@
 import { createContext, useState, ReactNode } from 'react'
-import authUser from '../mocks/authUser.json'
+import mock_db from '../mocks/mock_db.json'
 
 interface User {
   user_id: number
@@ -15,7 +15,7 @@ interface AuthContextType {
 export const AuthContext = createContext<AuthContextType | null>(null)
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
-  const [user] = useState<User>(authUser)
+  const [user] = useState<User>(mock_db.auth_user)
   console.log('user', user)
 
   return (

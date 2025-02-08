@@ -1,11 +1,12 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useContext } from 'react'
+import { usePosts } from '../../../hooks/usePosts'
 
 interface User {
   user_id: number
   username: string
   first_name: string
   last_name: string
-  email: string
+  email?: string
   avatar: string
   role: string
 }
@@ -21,6 +22,7 @@ interface ModalProps {
 
 const CreatePostModal: React.FC<ModalProps> = ({ onClose, user }) => {
   const [postContent, setPostContent] = useState('')
+  const { posts, addPost } = usePosts()
   const contentRef = useRef<HTMLDivElement>(null)
 
   const isContentEmpty = (html: string) => {
@@ -37,6 +39,19 @@ const CreatePostModal: React.FC<ModalProps> = ({ onClose, user }) => {
 
     element.style.height = 'auto'
     element.style.height = element.scrollHeight + 'px'
+  }
+
+  const onCreatePost = () => {
+    const nextPostId = Object.keys(posts).length + 1
+
+    const newPost = {
+      ...user,
+      post_id: nextPostId,
+      content: postContent,
+      timestamp: new Date().toISOString(),
+    }
+    addPost(newPost)
+    onClose()
   }
 
   const hasContentWritten = !isContentEmpty(postContent)
@@ -77,6 +92,7 @@ const CreatePostModal: React.FC<ModalProps> = ({ onClose, user }) => {
 
         <div className="flex justify-end mt-auto">
           <button
+            onClick={onCreatePost}
             disabled={!hasContentWritten}
             className={`px-4 py-1  rounded-full transition font-semibold ${
               hasContentWritten
