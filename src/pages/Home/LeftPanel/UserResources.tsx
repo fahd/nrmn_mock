@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { MemberAction } from '../../../components'
 
 const UserResources = () => {
@@ -10,19 +9,19 @@ const UserResources = () => {
   // Connection requests on the side
   return (
     <ul className="bg-white rounded-md border-1 border-gray-200 list-none py-4">
-      <MemberAction title={'Connections'} />
-      <MemberAction title={'Ask a Mentor'} />
-      <MemberAction title={'MyMentor'} />
-      <MemberAction title={'Courses'} />
-      <MemberAction title={'Jobs & Internships'} />
-      <MemberAction title={'Journals'} />
-      <MemberAction title={'Groups'} />
-      <MemberAction title={'My CV/Resume'} />
-      <MemberAction title={'My Projects'} />
-      <MemberAction title={'My Publications'} />
-      <MemberAction title={'My Calendar'} />
-      <MemberAction title={'My Files'} />
-      <MemberAction title={'Knowledgebase'} />
+      <MemberAction logo={'handshake'} title={'Connections'} />
+      <MemberAction logo={'questioncircle'} title={'Ask a Mentor'} />
+      <MemberAction logo={'certificate'} title={'MyMentor'} />
+      <MemberAction logo={'laptop'} title={'Courses'} />
+      <MemberAction logo={'briefcase'} title={'Jobs & Internships'} />
+      <MemberAction logo={'book'} title={'Journals'} />
+      <MemberAction logo={'users'} title={'Groups'} />
+      <MemberAction logo={''} title={'My CV/Resume'} />
+      <MemberAction logo={'producthunt'} title={'My Projects'} />
+      <MemberAction logo={''} title={'My Publications'} />
+      <MemberAction logo={''} title={'My Calendar'} />
+      <MemberAction logo={''} title={'My Files'} />
+      <MemberAction logo={'infocircle'} title={'Knowledgebase'} />
     </ul>
   )
 }

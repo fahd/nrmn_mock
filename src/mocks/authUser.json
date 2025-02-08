@@ -4,5 +4,6 @@
   "first_name": "Frank",
   "last_name": "Sheikh",
   "email": "fahdsheikh@my.unthsc.edu",
-  "avatar": "/public/assets/users/authUser.jpg"
+  "avatar": "/public/assets/users/authUser.jpg",
+  "role": "mentee"
 }

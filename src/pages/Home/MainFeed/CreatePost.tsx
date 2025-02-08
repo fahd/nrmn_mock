@@ -7,6 +7,7 @@ interface User {
   last_name: string
   email: string
   avatar: string
+  role: string
 }
 
 interface CreatePostType {

@@ -11,7 +11,8 @@ const MainFeed = () => {
   return (
     <div className="flex-1 mx-6">
       <CreatePost user={user} />
-      <PostFeed posts={posts} />
+      {/* "user" was included in case we wanted to handle direct answering to the question on the main page, rather than the separate question page */}
+      <PostFeed user={user} posts={posts} />
     </div>
   )
 }
