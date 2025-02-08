@@ -1,17 +1,17 @@
 import React from 'react'
-import { CreatePost } from '../../../components'
+import CreatePost from './CreatePost'
+import PostFeed from './PostFeed'
 import { useAuth } from '../../../hooks/useAuth'
+import { usePosts } from '../../../hooks/usePosts'
 
 const MainFeed = () => {
   const { user } = useAuth()
-  // nav
-  // body
-  // left nav with actions
-  // main feed
-  // Connection requests on the side
+  const { posts } = usePosts()
+
   return (
     <div className="flex-1 mx-6">
       <CreatePost user={user} />
+      <PostFeed posts={posts} />
     </div>
   )
 }
