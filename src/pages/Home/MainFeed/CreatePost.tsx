@@ -2,11 +2,11 @@ import React, { useState, useRef, useContext } from 'react'
 import { useData } from '../../../hooks/useData'
 import { isContentEmpty } from '../../../utils'
 import { ModalProps, CreatePostType, User } from '../../../typings/typings'
-import { CreateMessage } from '../../../components/CreateContent/CreateContent'
+import { CreateMessage } from '../../../components/Content/Content'
 
 const CreatePostModal: React.FC<ModalProps> = ({ onClose, user }) => {
   const [postContent, setPostContent] = useState('')
-  const { posts, addPost } = useData()
+  const { posts, addPost, replies, addReply } = useData()
 
   const contentRef = useRef<HTMLDivElement>(null)
 
@@ -18,9 +18,10 @@ const CreatePostModal: React.FC<ModalProps> = ({ onClose, user }) => {
       post_id: nextPostId,
       content: postContent,
       timestamp: new Date().toISOString(),
-      replies: [],
       likes: {},
     }
+
+    addReply(nextPostId, true)
     addPost(newPost)
     onClose()
   }

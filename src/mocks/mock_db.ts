@@ -12,7 +12,7 @@ const replies = {
       content:
         "<p>Great topic! I've used ARIMA extensively in my research.</p> <p>Would you be interested in exploring hybrid approaches, such as combining ARIMA with LSTMs?</p>",
       timestamp: '2025-01-28T11:15:00Z',
-      likes: new Set(),
+      likes: {},
     },
   ],
   '2': [
@@ -28,7 +28,7 @@ const replies = {
       content:
         "<p>Interesting question! I've seen some promising work in integrating logic-based reasoning into deep learning models.</p> <p>Do you have any thoughts on how these hybrid models handle uncertainty?</p>",
       timestamp: '2025-01-29T14:00:00Z',
-      likes: new Set(),
+      likes: {},
     },
   ],
   '3': [
@@ -44,7 +44,7 @@ const replies = {
       content:
         '<p>I recommend checking out the Global Biodiversity Information Facility (GBIF).</p> <p>It provides a wealth of publicly available biodiversity data.</p>',
       timestamp: '2025-01-30T09:20:00Z',
-      likes: new Set(),
+      likes: {},
     },
   ],
   '4': [
@@ -60,7 +60,7 @@ const replies = {
       content:
         '<p>One effective method is collaborating with policy think tanks.</p> <p>They help bridge the gap between research and policy implementation.</p>',
       timestamp: '2025-02-01T18:10:00Z',
-      likes: new Set(),
+      likes: {},
     },
   ],
   '5': [
@@ -76,7 +76,7 @@ const replies = {
       content:
         '<p>Look into the NIH and Marie Curie fellowships.</p> <p>They have great funding opportunities for neuroscience research.</p>',
       timestamp: '2025-02-02T12:30:00Z',
-      likes: new Set(),
+      likes: {},
     },
   ],
   '6': [
@@ -92,7 +92,7 @@ const replies = {
       content:
         "<p>Strogatz's 'Nonlinear Dynamics and Chaos' is an excellent choice.</p> <p>It's both comprehensive and beginner-friendly.</p>",
       timestamp: '2025-02-03T15:45:00Z',
-      likes: new Set(),
+      likes: {},
     },
   ],
   '7': [
@@ -108,7 +108,7 @@ const replies = {
       content:
         '<p>I recommend using PyMC3 for Bayesian modeling.</p> <p>It has a great suite of tools for MCMC methods.</p>',
       timestamp: '2025-02-04T18:00:00Z',
-      likes: new Set(),
+      likes: {},
     },
   ],
   '8': [
@@ -124,41 +124,13 @@ const replies = {
       content:
         "<p>Fascinating research, Dr. Rahmani! How does your approach compare with Shor's error correction algorithm?</p>",
       timestamp: '2025-02-05T16:10:00Z',
-      likes: new Set(),
-    },
-    {
-      post_id: 8,
-      reply_id: 9,
-      user_id: 5,
-      username: 'DrKojiTanaka',
-      first_name: 'Koji',
-      last_name: 'Tanaka',
-      avatar: '/public/assets/users/5.jpg',
-      role: 'mentor',
-      content:
-        "<p>I've been working on quantum noise reduction. Would love to collaborate and see if our methods could complement each other.</p>",
-      timestamp: '2025-02-05T16:30:00Z',
-      likes: new Set(),
-    },
-    {
-      post_id: 8,
-      reply_id: 10,
-      user_id: 10,
-      username: 'DrElenaPetrovic',
-      first_name: 'Elena',
-      last_name: 'Petrovic',
-      avatar: '/public/assets/users/10.jpg',
-      role: 'mentor',
-      content:
-        '<p>Brilliant work! Have you considered testing this on a superconducting qubit architecture?</p>',
-      timestamp: '2025-02-05T17:05:00Z',
-      likes: new Set(),
+      likes: {},
     },
   ],
   '9': [
     {
       post_id: 9,
-      reply_id: 11,
+      reply_id: 9,
       user_id: 7,
       username: 'ProfYusufAbdelaziz',
       first_name: 'Yusuf',
@@ -168,11 +140,11 @@ const replies = {
       content:
         "<p>Great question! One key element is a **clear problem statement**. If you can articulate the research problem in two concise sentences, you're on the right track.</p>",
       timestamp: '2025-02-06T11:00:00Z',
-      likes: new Set(),
+      likes: { 1: true },
     },
     {
       post_id: 9,
-      reply_id: 12,
+      reply_id: 10,
       user_id: 9,
       username: 'ProfRahulDeshmukh',
       first_name: 'Rahul',
@@ -182,24 +154,10 @@ const replies = {
       content:
         "<p>I'd recommend including a **strong methodology section** that explicitly outlines data collection and analysis techniques.</p>",
       timestamp: '2025-02-06T11:20:00Z',
-      likes: new Set(),
-    },
-    {
-      post_id: 9,
-      reply_id: 13,
-      user_id: 4,
-      username: 'DrNaimaRahmani',
-      first_name: 'Naima',
-      last_name: 'Rahmani',
-      avatar: '/public/assets/users/4.jpg',
-      role: 'mentor',
-      content:
-        '<p>Another tip: **Tie your proposal to existing research**. Showing that your study builds on prior work will make it more compelling.</p>',
-      timestamp: '2025-02-06T11:45:00Z',
-      likes: new Set(),
+      likes: {},
     },
   ],
-  '10': [],
+  '10': null,
 }
 
 const users = {
@@ -316,7 +274,6 @@ const posts = {
     content:
       "<p>📊 Comparing econometric methods for time series forecasting</p> <p>I'm trying to compare various econometric models for forecasting long-term financial trends.</p>",
     timestamp: '2025-01-28T09:15:00Z',
-    replies: replies['1'],
   },
   '2': {
     post_id: 2,
@@ -329,7 +286,6 @@ const posts = {
     content:
       "<p>🖥️ Are neural-symbolic hybrid models the future of AI?</p> <p>I've been exploring neural-symbolic AI, which combines deep learning with logical reasoning.</p>",
     timestamp: '2025-01-29T13:40:00Z',
-    replies: replies['2'],
   },
   '3': {
     post_id: 3,
@@ -342,7 +298,6 @@ const posts = {
     content:
       '<p>🔍 Looking for a dataset on global biodiversity loss</p> <p>I’m currently working on a large-scale meta-analysis of biodiversity trends over the past 50 years.</p>',
     timestamp: '2025-01-30T08:50:00Z',
-    replies: replies['3'],
   },
   '4': {
     post_id: 4,
@@ -355,7 +310,6 @@ const posts = {
     content:
       '<p>📝 Challenges in translating research into policy</p> <p>How do you ensure your research influences policymakers effectively?</p>',
     timestamp: '2025-02-01T16:30:00Z',
-    replies: replies['4'],
   },
   '5': {
     post_id: 5,
@@ -368,7 +322,6 @@ const posts = {
     content:
       '<p>🎓 Tips for securing a postdoc in computational neuroscience?</p> <p>Any advice on strong programs, funding opportunities, or application tips?</p>',
     timestamp: '2025-02-02T10:55:00Z',
-    replies: replies['5'],
   },
   '6': {
     post_id: 6,
@@ -381,7 +334,6 @@ const posts = {
     content:
       "<p>📚 Best reference books for understanding nonlinear dynamics?</p> <p>I'm preparing a lecture series and need some high-quality resources.</p>",
     timestamp: '2025-02-03T14:10:00Z',
-    replies: replies['6'],
   },
   '7': {
     post_id: 7,
@@ -394,7 +346,6 @@ const posts = {
     content:
       '<p>💡 Need help with Bayesian statistics in social sciences</p> <p>Any experts in Bayesian modeling willing to provide guidance?</p>',
     timestamp: '2025-02-04T17:20:00Z',
-    replies: replies['7'],
   },
   '8': {
     post_id: 8,
@@ -407,7 +358,6 @@ const posts = {
     content:
       "<p>🔬 Breakthrough in Quantum Computing!</p> <p>My team has recently published a paper on error correction in quantum circuits. This could significantly improve the stability of quantum processors in real-world applications.</p> <p>Check out our findings here: <a href='#'>Quantum Error Correction Research</a>. Would love to hear feedback from fellow quantum researchers!</p>",
     timestamp: '2025-02-05T15:45:00Z',
-    replies: replies['8'],
   },
   '9': {
     post_id: 9,
@@ -420,7 +370,6 @@ const posts = {
     content:
       "<p>📢 What are the best practices for structuring a research proposal?</p> <p>I am mentoring graduate students who are drafting their first <em>research proposals</em>. What are some key elements that should be included? What resources do you recommend?</p> <p>For reference, I often suggest reading <a href='#'>this guide on proposal writing</a>, but I would love to hear insights from the community.</p>",
     timestamp: '2025-02-06T10:30:00Z',
-    replies: replies['9'],
   },
   '10': {
     post_id: 10,
@@ -433,7 +382,6 @@ const posts = {
     content:
       "<p>🚀 Exciting opportunity for collaboration!</p> <p>I am currently conducting research on the application of machine learning in early cancer detection. Specifically, I am working with <em>convolutional neural networks (CNNs)</em> to analyze histopathological images for early signs of malignancy.</p> <p>I would love to connect with researchers who have experience with biomedical imaging, deep learning, or clinical applications. If you’re working on something similar, let’s discuss potential collaborations!</p> <p>📚 Reference Papers: <a href='#'>Deep Learning in Cancer Imaging</a></p>",
     timestamp: '2025-02-07T12:00:00Z',
-    replies: replies['10'],
   },
 }
 
@@ -442,6 +390,7 @@ const mock_db = {
   users,
   posts,
   replies,
+  totalReplies: 10,
 }
 
 export default mock_db

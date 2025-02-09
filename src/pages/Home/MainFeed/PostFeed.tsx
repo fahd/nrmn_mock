@@ -1,4 +1,5 @@
 import React from 'react'
+import { useData } from '../../../hooks/useData'
 import { Link } from 'react-router-dom'
 import { formatDate } from '../../../utils'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -9,37 +10,7 @@ import {
   ReplyType,
   PostFeedProps,
 } from '../../../typings/typings'
-
-const Reply: React.FC<ReplyType> = ({
-  post_id,
-  reply_id,
-  user_id,
-  username,
-  first_name,
-  last_name,
-  avatar,
-  content,
-  timestamp,
-}) => {
-  return (
-    <div className="flex">
-      <img
-        src={avatar}
-        alt={username}
-        className="rounded-full w-[30px] h-[30px] object-cover"
-      />
-      <div className="ml-2 flex flex-col">
-        <div className="text-link font-semibold">
-          {first_name} {last_name}
-        </div>
-        <p
-          className="pb-4 text-md"
-          dangerouslySetInnerHTML={{ __html: content }}
-        />
-      </div>
-    </div>
-  )
-}
+import { Reply } from '../../../components/Content/Content'
 
 const Post: React.FC<PostType> = ({
   post_id,
@@ -51,15 +22,27 @@ const Post: React.FC<PostType> = ({
   content,
   timestamp,
   user,
-  replies,
 }) => {
+  const { replies, likeReply } = useData()
+
+  const postReplies = replies[post_id]
+
   const renderPostReplies = () => {
-    return replies.map((reply, idx) => {
-      return <Reply key={reply.reply_id} {...reply} />
+    return postReplies.map((reply, idx) => {
+      return (
+        <Reply
+          me={user.user_id}
+          key={reply.reply_id}
+          style="py-1"
+          fontSize="text-md"
+          likeReply={likeReply}
+          {...reply}
+        />
+      )
     })
   }
 
-  const hasReplies = replies.length > 0
+  const hasReplies = Boolean(postReplies)
 
   return (
     <div className="bg-white pt-4 px-6  my-6 rounded-md border border-gray-200 align-center">
@@ -105,7 +88,7 @@ const PostFeed: React.FC<PostFeedProps> = ({ posts, user }) => {
     const lastIndex = postIds.length - 1
     return postIds.map((_, i) => {
       const postId = postIds[lastIndex - i]
-      return <Post key={postId} {...posts[postId]} />
+      return <Post key={postId} {...posts[postId]} user={user} />
     })
   }
   return <div>{renderPosts()}</div>

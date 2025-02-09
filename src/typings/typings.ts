@@ -21,6 +21,10 @@ export interface ReplyType {
   timestamp: string
   user_id: number
   username: string
+  style?: string
+  fontSize?: string
+  me: number
+  likeReply: (post_id: number, reply_id: number, user_id: number) => void
 }
 
 export interface Replies {
@@ -47,6 +51,10 @@ export interface PostType {
   timestamp: string
   user: UserType
   replies: ReplyType[]
+  role: string
+  likes: {
+    [key: string]: boolean
+  }
 }
 
 export interface User {
@@ -85,4 +93,18 @@ export interface CreateMessageType {
 export interface QuestionAnswerType {
   replies: ReplyType[]
   user: User
+  post_id: number
+  likeReply: (post_id: number, reply_id: number, user_id: number) => void
+}
+
+export interface DataContextType {
+  posts: PostType[]
+  replies: ReplyType[]
+  addPost: (newPost: PostType) => void
+  addReply: (
+    post_id: number,
+    is_new_post: boolean,
+    new_reply: React.RefObject<HTMLDivElement>
+  ) => void
+  likeReply: (post_id: number, reply_id: number, user_id: number) => void
 }

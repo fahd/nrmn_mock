@@ -1,57 +1,128 @@
 import React, { createContext, useState, useEffect, ReactNode } from 'react'
 import mock_db from '../mocks/mock_db'
-
-interface ReplyType {
-  avatar: string
-  content: string
-  first_name: string
-  last_name: string
-  likes: Set<number>
-  post_parent_id: number
-  reply_id: number
-  role: number
-  timestamp: string
-  user_id: number
-  username: string
-}
-
-interface Post {
-  post_id: number
-  user_id: number
-  username: string
-  first_name: string
-  last_name: string
-  avatar: string
-  content: string
-  timestamp: string
-  replies: ReplyType
-}
-
-interface DataContextType {
-  posts: Post[]
-  addPost: (newPost: Post) => void
-}
+import { ReplyType, PostType, DataContextType } from '../typings/typings'
 
 export const DataContext = createContext<DataContextType | null>(null)
 
 export const DataProvider = ({ children }: { children: ReactNode }) => {
-  const loadPosts = () => {
-    const storedPosts = localStorage.getItem('posts')
-    return storedPosts ? JSON.parse(storedPosts) : mock_db.posts
+  const loadData = () => {
+    const storedData = localStorage.getItem('data')
+    return storedData ? JSON.parse(storedData) : mock_db
   }
 
-  const [posts, setPosts] = useState<Record<string, Post>>(loadPosts())
+  const [data, setData] = useState<Record<string, PostType>>(loadData())
 
-  const addPost = (newPost: Post) => {
-    setPosts((prevPosts) => {
-      const updatedPosts = { ...prevPosts, [newPost.post_id]: newPost }
-      localStorage.setItem('posts', JSON.stringify(updatedPosts))
-      return updatedPosts
+  const addPost = (newPost: PostType) => {
+    setData((prevData) => {
+      const storedData = localStorage.getItem('data')
+      const updatedPosts = { ...prevData.posts, [newPost.post_id]: newPost }
+      const updatedData = {
+        ...prevData,
+        posts: updatedPosts,
+      }
+      localStorage.setItem('data', JSON.stringify(updatedData))
+      return updatedData
+    })
+  }
+
+  const addReply = (
+    post_id: number,
+    is_new_post: boolean,
+    new_reply?: React.RefObject<HTMLDivElement>
+  ) => {
+    // need to initialize new reply in mock replies data to map to new post
+    if (is_new_post) {
+      setData((prevData) => {
+        const storedData = localStorage.getItem('data')
+        const updatedReplies = { ...prevData.replies, [post_id]: null }
+        const updatedData = {
+          ...prevData,
+          replies: updatedReplies,
+        }
+        localStorage.setItem('data', JSON.stringify(updatedData))
+        return updatedData
+      })
+    }
+    // when we actually are saving a new reply
+    else {
+      const nextReplyId = data.totalReplies + 1
+      const { user_id, username, first_name, last_name, avatar, role } =
+        data.auth_user
+      const newReply = {
+        post_id: post_id,
+        reply_id: nextReplyId,
+        user_id: user_id,
+        username: username,
+        first_name: first_name,
+        last_name: last_name,
+        avatar: avatar,
+        role: role,
+        content: new_reply,
+        timestamp: new Date().toISOString(),
+        likes: {},
+      }
+
+      setData((prevData) => {
+        const prevReplies = prevData.replies[post_id]
+        let updatedReplies
+
+        if (!Boolean(prevReplies)) {
+          updatedReplies = [newReply]
+        } else {
+          updatedReplies = [...prevReplies, newReply]
+        }
+
+        const updatedData = {
+          ...prevData,
+          replies: { ...prevData.replies, [post_id]: updatedReplies },
+          totalReplies: data.totalReplies + 1,
+        }
+        localStorage.setItem('data', JSON.stringify(updatedData))
+        return updatedData
+      })
+    }
+  }
+
+  const likeReply = (post_id: number, reply_id: number, user_id: number) => {
+    setData((prevData) => {
+      const updatedReplies = [...prevData.replies[post_id]]
+      const findIdx = updatedReplies.findIndex((r) => r.reply_id === reply_id)
+      const updatedReply = { ...updatedReplies[findIdx] }
+      const updatedLikes = { ...updatedReply.likes }
+
+      if (updatedLikes[user_id]) {
+        delete updatedLikes[user_id]
+      } else {
+        updatedLikes[user_id] = true
+      }
+
+      updatedReply.likes = updatedLikes
+      updatedReplies[findIdx] = updatedReply
+
+      const updatedData = {
+        ...prevData,
+        replies: {
+          ...prevData.replies,
+          [post_id]: updatedReplies,
+        },
+      }
+
+      localStorage.setItem('data', JSON.stringify(updatedData))
+
+      return updatedData
     })
   }
 
   return (
-    <DataContext.Provider value={{ posts, addPost }}>
+    <DataContext.Provider
+      value={{
+        posts: data.posts,
+        replies: data.replies,
+        addPost,
+        addReply,
+        likeReply,
+      }}
+    >
       {children}
     </DataContext.Provider>
   )

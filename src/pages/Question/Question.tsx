@@ -7,18 +7,21 @@ import QuestionAnswers from './QuestionAnswers'
 
 const Question = () => {
   const { id } = useParams()
-  const { posts } = useData()
+  const { posts, replies, addReply, likeReply } = useData()
   const { user } = useAuth()
   const postId = Number(id)
   const question = posts[postId]
-  const replies = question.replies
 
   return (
     <div className="flex-1">
-      {/* top */}
       <QuestionContent {...question} />
-      {/* bottom */}
-      <QuestionAnswers user={user} replies={question.replies} />
+      <QuestionAnswers
+        user={user}
+        replies={replies[postId]}
+        addReply={addReply}
+        post_id={postId}
+        likeReply={likeReply}
+      />
     </div>
   )
 }

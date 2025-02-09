@@ -6,7 +6,7 @@ import { useData } from '../../../hooks/useData'
 
 const MainFeed = () => {
   const { user } = useAuth()
-  const { posts } = useData()
+  const { posts, replies } = useData()
 
   return (
     <div className="flex-1 mx-6">
