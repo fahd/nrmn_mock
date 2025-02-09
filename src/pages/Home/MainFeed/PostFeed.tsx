@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { formatDate } from '../../../utils/formatDate'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
@@ -12,7 +13,6 @@ interface PostType {
   avatar: string
   content: string
   timestamp: string
-  likes: Set<number>
   user: UserType
 }
 
@@ -42,7 +42,6 @@ const Reply = ({
   avatar,
   content,
   timestamp,
-  likes,
 }) => {
   return (
     <div className="flex">
@@ -73,7 +72,6 @@ const Post: React.FC<PostType> = ({
   avatar,
   content,
   timestamp,
-  likes,
   user,
   replies,
 }) => {
@@ -111,7 +109,9 @@ const Post: React.FC<PostType> = ({
       <div className="flex flex-end justify-end pt-4 pb-4 pr-4">
         <div className="flex items-center"></div>
         <div className="font-semibold text-gray-600 flex items-center p-2  cursor-pointer text-link">
-          <div className="mr-2">Answer {first_name}'s question</div>
+          <Link to={`/question/${post_id}`} className="mr-2">
+            Answer {first_name}'s question
+          </Link>
           <FontAwesomeIcon icon={faEdit} className="w-4 h-4" />
         </div>
       </div>

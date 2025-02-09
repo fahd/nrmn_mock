@@ -1,13 +1,14 @@
 import React from 'react'
-
+import { formatDate } from '../../utils/formatDate'
 interface QuestionContentType {
+  post_id: number
   avatar: string
   content: string
   first_name: string
   last_name: string
-  post_id: number
   timestamp: string
   username: string
+  role: string
 }
 
 const QuestionContent: React.FC<QuestionContentType> = ({
@@ -18,23 +19,39 @@ const QuestionContent: React.FC<QuestionContentType> = ({
   post_id,
   timestamp,
   username,
+  role,
 }) => {
-  console.log('avatar', avatar)
+  const upperCase = (s: string) => {
+    return s[0].toUpperCase() + role.slice(1)
+  }
   return (
-    <div className="flex flex-col">
-      <div className="flex">
-        <img
-          src={avatar}
-          alt={username}
-          className="rounded-full w-[50px] h-[50px] object-cover"
-        />
-        <div className="font-semibold ml-4">
-          <div>
-            {first_name} {last_name}
+    <div className="bg-white">
+      <div className="m-auto max-w-3xl p-4">
+        <div className="flex flex-col flex-1">
+          <div className="flex">
+            <img
+              src={avatar}
+              alt={username}
+              className="rounded-full w-[55px] h-[55px] object-cover"
+            />
+            <div className=" ml-4">
+              <div className="font-semibold text-link">
+                {first_name} {last_name}
+              </div>
+              <div className="text-gray-400 text-sm">{upperCase(role)}</div>
+              <div className="text-gray-400 text-xs">
+                {formatDate(timestamp)}
+              </div>
+            </div>
+          </div>
+          <div className="py-12 flex items-center flex-1">
+            <p
+              className="pb-4 text-xl"
+              dangerouslySetInnerHTML={{ __html: content }}
+            />
           </div>
         </div>
       </div>
-      <div className="py-4">hi</div>
     </div>
   )
 }

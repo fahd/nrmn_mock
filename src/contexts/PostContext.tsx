@@ -1,6 +1,20 @@
 import React, { createContext, useState, useEffect, ReactNode } from 'react'
 import mock_db from '../mocks/mock_db'
 
+interface ReplyType {
+  avatar: string
+  content: string
+  first_name: string
+  last_name: string
+  likes: Set<number>
+  post_parent_id: number
+  reply_id: number
+  role: number
+  timestamp: string
+  user_id: number
+  username: string
+}
+
 interface Post {
   post_id: number
   user_id: number
@@ -10,6 +24,7 @@ interface Post {
   avatar: string
   content: string
   timestamp: string
+  replies: ReplyType
 }
 
 interface PostContextType {
