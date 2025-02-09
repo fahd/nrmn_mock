@@ -16,7 +16,6 @@ export const AuthContext = createContext<AuthContextType | null>(null)
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user] = useState<User>(mock_db.auth_user)
-  console.log('user', user)
 
   return (
     <AuthContext.Provider value={{ user }}>{children}</AuthContext.Provider>

@@ -1,13 +1,3 @@
-const auth_user = {
-  user_id: 1,
-  username: 'franksheikh',
-  first_name: 'Frank',
-  last_name: 'Sheikh',
-  email: 'fahdsheikh@my.unthsc.edu',
-  avatar: '/public/assets/users/authUser.jpg',
-  role: 'mentee',
-}
-
 const replies = {
   '1': [
     {
@@ -213,7 +203,15 @@ const replies = {
 }
 
 const users = {
-  '1': auth_user,
+  '1': {
+    user_id: 1,
+    username: 'franksheikh',
+    first_name: 'Frank',
+    last_name: 'Sheikh',
+    email: 'fahdsheikh@my.unthsc.edu',
+    avatar: '/public/assets/users/authUser.jpg',
+    role: 'mentee',
+  },
   '2': {
     user_id: 2,
     username: 'DrMiriamKovács',
@@ -440,7 +438,7 @@ const posts = {
 }
 
 const mock_db = {
-  auth_user,
+  auth_user: users['1'],
   users,
   posts,
   replies,

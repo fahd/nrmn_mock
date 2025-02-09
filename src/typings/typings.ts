@@ -27,16 +27,6 @@ export interface Replies {
   replies: ReplyType[]
 }
 
-export interface User {
-  user_id: number
-  username: string
-  first_name: string
-  last_name: string
-  email?: string
-  avatar: string
-  role: string
-}
-
 export interface CreatePostType {
   user: User
 }
@@ -59,6 +49,16 @@ export interface PostType {
   replies: ReplyType[]
 }
 
+export interface User {
+  user_id: number
+  username: string
+  first_name: string
+  last_name: string
+  email?: string
+  avatar: string
+  role: string
+}
+
 export interface UserType {
   user_id: number
   username: string
@@ -75,10 +75,14 @@ export interface PostFeedProps {
 }
 
 export interface CreateMessageType {
-  onSubmit: () => void
   contentRef: React.RefObject<HTMLDivElement>
   setPostContent: (content: string) => void
   onChange: (content: string) => void // Updated from setPostContent
   placeholder: string
   type: string
+}
+
+export interface QuestionAnswerType {
+  replies: ReplyType[]
+  user: User
 }

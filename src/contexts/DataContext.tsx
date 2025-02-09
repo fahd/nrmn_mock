@@ -27,14 +27,14 @@ interface Post {
   replies: ReplyType
 }
 
-interface PostContextType {
+interface DataContextType {
   posts: Post[]
   addPost: (newPost: Post) => void
 }
 
-export const PostContext = createContext<PostContextType | null>(null)
+export const DataContext = createContext<DataContextType | null>(null)
 
-export const PostProvider = ({ children }: { children: ReactNode }) => {
+export const DataProvider = ({ children }: { children: ReactNode }) => {
   const loadPosts = () => {
     const storedPosts = localStorage.getItem('posts')
     return storedPosts ? JSON.parse(storedPosts) : mock_db.posts
@@ -51,8 +51,8 @@ export const PostProvider = ({ children }: { children: ReactNode }) => {
   }
 
   return (
-    <PostContext.Provider value={{ posts, addPost }}>
+    <DataContext.Provider value={{ posts, addPost }}>
       {children}
-    </PostContext.Provider>
+    </DataContext.Provider>
   )
 }

@@ -4,7 +4,6 @@ import { isContentEmpty } from '../../utils'
 
 export const CreateMessage: React.FC<CreateMessageType> = ({
   contentRef,
-  onSubmit,
   onChange,
   placeholder,
   type,

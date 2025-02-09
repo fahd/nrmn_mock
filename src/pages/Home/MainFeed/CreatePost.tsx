@@ -1,12 +1,12 @@
 import React, { useState, useRef, useContext } from 'react'
-import { usePosts } from '../../../hooks/usePosts'
+import { useData } from '../../../hooks/useData'
 import { isContentEmpty } from '../../../utils'
 import { ModalProps, CreatePostType, User } from '../../../typings/typings'
 import { CreateMessage } from '../../../components/CreateContent/CreateContent'
 
 const CreatePostModal: React.FC<ModalProps> = ({ onClose, user }) => {
   const [postContent, setPostContent] = useState('')
-  const { posts, addPost } = usePosts()
+  const { posts, addPost } = useData()
 
   const contentRef = useRef<HTMLDivElement>(null)
 
@@ -32,9 +32,13 @@ const CreatePostModal: React.FC<ModalProps> = ({ onClose, user }) => {
       <div className="relative bg-white p-6 rounded-lg shadow-lg w-[750px] min-h-[500px] flex flex-col mt-[-30vh]">
         <button
           onClick={onClose}
-          className="absolute top-2 right-2 px-4 py-2 text-gray-500 hover:text-gray-700 transition cursor-pointer"
+          className="absolute top-3 right-3 px-4 py-2 text-gray-500 hover:text-gray-700 transition cursor-pointer"
         >
-          X
+          <img
+            src="/public/icons/close.svg"
+            alt="close modal"
+            className="w-[15px] h-[15px]"
+          />
         </button>
 
         <div className="flex pt-2 pb-4">

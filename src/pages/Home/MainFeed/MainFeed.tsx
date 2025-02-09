@@ -2,11 +2,11 @@ import React from 'react'
 import CreatePost from './CreatePost'
 import PostFeed from './PostFeed'
 import { useAuth } from '../../../hooks/useAuth'
-import { usePosts } from '../../../hooks/usePosts'
+import { useData } from '../../../hooks/useData'
 
 const MainFeed = () => {
   const { user } = useAuth()
-  const { posts } = usePosts()
+  const { posts } = useData()
 
   return (
     <div className="flex-1 mx-6">
