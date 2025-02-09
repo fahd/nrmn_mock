@@ -17,14 +17,14 @@ export interface ReplyType {
   likes: Set<number>
   post_id: number
   reply_id: number
-  role: number
+  role: string
   timestamp: string
   user_id: number
   username: string
 }
 
 export interface Replies {
-  replies: ReplyType
+  replies: ReplyType[]
 }
 
 export interface User {
@@ -72,4 +72,13 @@ export interface UserType {
 export interface PostFeedProps {
   posts: PostType[]
   user: UserType
+}
+
+export interface CreateMessageType {
+  onSubmit: () => void
+  contentRef: React.RefObject<HTMLDivElement>
+  setPostContent: (content: string) => void
+  onChange: (content: string) => void // Updated from setPostContent
+  placeholder: string
+  type: string
 }

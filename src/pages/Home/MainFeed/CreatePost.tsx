@@ -1,28 +1,14 @@
 import React, { useState, useRef, useContext } from 'react'
 import { usePosts } from '../../../hooks/usePosts'
-
+import { isContentEmpty } from '../../../utils'
 import { ModalProps, CreatePostType, User } from '../../../typings/typings'
+import { CreateMessage } from '../../../components/CreateContent/CreateContent'
 
 const CreatePostModal: React.FC<ModalProps> = ({ onClose, user }) => {
   const [postContent, setPostContent] = useState('')
   const { posts, addPost } = usePosts()
+
   const contentRef = useRef<HTMLDivElement>(null)
-
-  const isContentEmpty = (html: string) => {
-    return html.replace(/<br>|<div>|<\/div>|&nbsp;/g, '').trim().length === 0
-  }
-
-  const handleInput = (event: React.FormEvent<HTMLDivElement>) => {
-    const element = event.currentTarget
-    setPostContent(element.innerHTML)
-
-    if (isContentEmpty(element.innerHTML)) {
-      element.innerHTML = ''
-    }
-
-    element.style.height = 'auto'
-    element.style.height = element.scrollHeight + 'px'
-  }
 
   const onCreatePost = () => {
     const nextPostId = Object.keys(posts).length + 1
@@ -66,14 +52,13 @@ const CreatePostModal: React.FC<ModalProps> = ({ onClose, user }) => {
           </div>
         </div>
 
-        <div
-          ref={contentRef}
-          contentEditable
-          onInput={handleInput}
-          className="w-full p-2 focus:outline-none text-gray-700 placeholder resize-none overflow-hidden text-xl"
-          style={{ minHeight: '40px', lineHeight: '1.5' }}
-          placeholder="What's on your mind?"
-        ></div>
+        <CreateMessage
+          onChange={setPostContent}
+          onSubmit={onCreatePost}
+          contentRef={contentRef}
+          type="post"
+          placeholder={"What's on your mind?"}
+        />
 
         <div className="flex justify-end mt-auto">
           <button
