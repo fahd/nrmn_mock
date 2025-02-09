@@ -1,5 +1,5 @@
 import { createContext, useState, ReactNode } from 'react'
-import mock_db from '../mocks/mock_db.json'
+import mock_db from '../mocks/mock_db'
 
 interface User {
   user_id: number
