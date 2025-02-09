@@ -1,39 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { formatDate } from '../../../utils/formatDate'
+import { formatDate } from '../../../utils'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
+import {
+  PostType,
+  UserType,
+  ReplyType,
+  PostFeedProps,
+} from '../../../typings/typings'
 
-interface PostType {
-  post_id: number
-  user_id: number
-  username: string
-  first_name: string
-  last_name: string
-  avatar: string
-  content: string
-  timestamp: string
-  user: UserType
-}
-
-interface UserType {
-  user_id: number
-  username: string
-  first_name: string
-  last_name: string
-  email: string
-  avatar: string
-  role: string
-}
-
-// Fix: Define PostFeed Props Correctly
-interface PostFeedProps {
-  posts: PostType[]
-  user: UserType
-}
-
-const Reply = ({
-  post_parent_id,
+const Reply: React.FC<ReplyType> = ({
+  post_id,
   reply_id,
   user_id,
   username,

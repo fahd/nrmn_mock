@@ -1,24 +1,7 @@
 import React, { useState, useRef, useContext } from 'react'
 import { usePosts } from '../../../hooks/usePosts'
 
-interface User {
-  user_id: number
-  username: string
-  first_name: string
-  last_name: string
-  email?: string
-  avatar: string
-  role: string
-}
-
-interface CreatePostType {
-  user: User
-}
-
-interface ModalProps {
-  onClose: () => void
-  user: User
-}
+import { ModalProps, CreatePostType, User } from '../../../typings/typings'
 
 const CreatePostModal: React.FC<ModalProps> = ({ onClose, user }) => {
   const [postContent, setPostContent] = useState('')

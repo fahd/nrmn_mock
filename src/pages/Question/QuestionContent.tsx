@@ -1,15 +1,6 @@
 import React from 'react'
-import { formatDate } from '../../utils/formatDate'
-interface QuestionContentType {
-  post_id: number
-  avatar: string
-  content: string
-  first_name: string
-  last_name: string
-  timestamp: string
-  username: string
-  role: string
-}
+import { upperCase, formatDate } from '../../utils'
+import { QuestionContentType } from '../../typings/typings'
 
 const QuestionContent: React.FC<QuestionContentType> = ({
   avatar,
@@ -21,9 +12,6 @@ const QuestionContent: React.FC<QuestionContentType> = ({
   username,
   role,
 }) => {
-  const upperCase = (s: string) => {
-    return s[0].toUpperCase() + role.slice(1)
-  }
   return (
     <div className="bg-white">
       <div className="m-auto max-w-3xl p-4">

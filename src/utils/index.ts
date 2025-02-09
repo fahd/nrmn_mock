@@ -7,3 +7,6 @@ export const formatDate = (isoString: string): string => {
     day: 'numeric', // "7"
   })
 }
+export const upperCase = (s: string) => {
+  return s[0].toUpperCase() + s.slice(1)
+}

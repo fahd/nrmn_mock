@@ -2,11 +2,6 @@ import React from 'react'
 import { MemberAction } from '../../../components'
 
 const UserResources = () => {
-  // nav
-  // body
-  // left nav with actions
-  // main feed
-  // Connection requests on the side
   return (
     <ul className="bg-white rounded-md border-1 border-gray-200 list-none py-4">
       <MemberAction logo={'handshake'} title={'Connections'} />
