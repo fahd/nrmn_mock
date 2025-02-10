@@ -140,7 +140,7 @@ const replies = {
       content:
         "<p>Great question! One key element is a **clear problem statement**. If you can articulate the research problem in two concise sentences, you're on the right track.</p>",
       timestamp: '2025-02-06T11:00:00Z',
-      likes: { 1: true },
+      likes: { 1: true, 2: true, 3: true, 4: true, 5: true },
     },
     {
       post_id: 9,
@@ -154,7 +154,7 @@ const replies = {
       content:
         "<p>I'd recommend including a **strong methodology section** that explicitly outlines data collection and analysis techniques.</p>",
       timestamp: '2025-02-06T11:20:00Z',
-      likes: {},
+      likes: { 2: true, 3: true, 4: true },
     },
   ],
   '10': null,

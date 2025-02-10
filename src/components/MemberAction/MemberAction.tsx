@@ -33,7 +33,7 @@ interface MemberActionType {
 
 const MemberAction: React.FC<MemberActionType> = ({ title, url, logo }) => {
   return (
-    <li className="cursor-pointer py-2 px-4 text-link font-fakt hover:bg-gray-100 transition-all duration-200 ">
+    <li className="py-2 px-4 text-link font-fakt hover:bg-gray-100 transition-all duration-200 ">
       {logo && iconMap[logo] && (
         <FontAwesomeIcon
           icon={iconMap[logo]}

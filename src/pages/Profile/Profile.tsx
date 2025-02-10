@@ -61,7 +61,7 @@ const Profile = () => {
             </div>
             <div className="flex mt-2">
               {areas_of_focus.map((area, idx) => (
-                <div className="font-semibold text-sm text-slate-500">
+                <div key={idx} className="font-semibold text-sm text-slate-500">
                   {area}
                   <span className="px-1.5">
                     {idx !== areas_of_focus.length - 1 && '•'}
