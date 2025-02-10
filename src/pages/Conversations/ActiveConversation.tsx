@@ -1,9 +1,5 @@
 import React, { useRef, useEffect } from 'react'
-import {
-  ActiveConversationType,
-  ConversationMessageType,
-  Message,
-} from '../../typings/typings'
+import { ActiveConversationType, Message } from '../../typings/typings'
 import { Link } from 'react-router-dom'
 import { formatDate, formatDateToTime } from '../../utils'
 import { CreateMessage } from '../../components/Content/Content'
@@ -50,7 +46,6 @@ const ConversationMessage: React.FC<Message> = ({
 }
 
 const ActiveConversation: React.FC<ActiveConversationType> = ({
-  me,
   conversation,
   users,
   setMessageContent,
@@ -61,13 +56,12 @@ const ActiveConversation: React.FC<ActiveConversationType> = ({
 
   useEffect(() => {
     if (bottomRef.current) {
-      console.log('herebro')
       bottomRef.current.scrollIntoView({ behavior: 'smooth' })
     }
   }, [conversation.messages])
 
   const renderConversationMessages = () => {
-    return conversation.messages.map((conversation, idx) => {
+    return conversation.messages.map((conversation) => {
       return (
         <ConversationMessage
           {...conversation}
@@ -90,7 +84,6 @@ const ActiveConversation: React.FC<ActiveConversationType> = ({
             onEnterSubmit={onEnterSubmit}
             placeholder={'Enter a new message here'}
             onChange={setMessageContent}
-            onSubmit={onEnterSubmit}
             contentRef={contentRef}
             type="post"
           />

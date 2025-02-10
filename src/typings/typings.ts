@@ -36,6 +36,21 @@ export interface CreatePostType {
   user: User
 }
 
+export interface RightPanelFeed {
+  conversations: Conversation[]
+  users: User[]
+}
+export interface RecentChatsType {
+  conversations: Conversation[]
+  users: User[]
+}
+
+export interface MainFeedType {
+  user: User
+  posts: PostType[]
+  replies: ReplyType[]
+}
+
 export interface ModalProps {
   onClose: () => void
   user: User
@@ -96,7 +111,9 @@ export interface Conversation {
   unread_count: number
   messages: Message[]
   timestamp: string
+  user: User
 }
+
 export interface PostFeedProps {
   posts: PostType[]
   user: User
@@ -104,8 +121,9 @@ export interface PostFeedProps {
 
 export interface CreateMessageType {
   contentRef: React.RefObject<HTMLDivElement>
-  setPostContent: (content: string) => void
-  onChange: (content: string) => void // Updated from setPostContent
+  setPostContent?: (content: string) => void
+  onChange: (content: string) => void
+  onEnterSubmit: () => void
   placeholder: string
   type?: string
   styles?: string

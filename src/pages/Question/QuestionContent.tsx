@@ -25,13 +25,13 @@ const QuestionContent: React.FC<QuestionContentType> = ({
               className="rounded-full w-[55px] h-[55px] object-cover"
             />
             <div className=" ml-4">
-              <div className="font-semibold text-link">
+              <div className="font-semibold text-link text-lg">
                 <Link to={`/user/${user_id}`}>
                   {first_name} {last_name}
                 </Link>
               </div>
-              <div className="text-gray-400 text-sm">{upperCase(role)}</div>
-              <div className="text-gray-400 text-xs">
+              <div className="text-slate-500 text-sm">{upperCase(role)}</div>
+              <div className="text-slate-500 text-xs">
                 {formatDate(timestamp)}
               </div>
             </div>

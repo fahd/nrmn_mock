@@ -4,12 +4,7 @@ import { Link } from 'react-router-dom'
 import { formatDate } from '../../../utils'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
-import {
-  PostType,
-  User,
-  ReplyType,
-  PostFeedProps,
-} from '../../../typings/typings'
+import { PostType, PostFeedProps } from '../../../typings/typings'
 import { Reply } from '../../../components/Content/Content'
 
 const Post: React.FC<PostType> = ({
@@ -28,7 +23,7 @@ const Post: React.FC<PostType> = ({
   const postReplies = replies[post_id]
 
   const renderPostReplies = () => {
-    return postReplies.map((reply, idx) => {
+    return postReplies.map((reply) => {
       return (
         <Reply
           me={user.user_id}
@@ -45,7 +40,7 @@ const Post: React.FC<PostType> = ({
   const hasReplies = Boolean(postReplies)
 
   return (
-    <div className="bg-white pt-4 px-6  my-6 rounded-md border border-gray-200 align-center">
+    <div className="bg-white pt-4 px-6 my-6 rounded-md border border-gray-200 align-center">
       <div className="flex">
         <img
           src={avatar}

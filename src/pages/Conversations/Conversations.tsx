@@ -20,7 +20,6 @@ const Conversations = () => {
         replace: true,
       })
     }
-    console.log('here')
   }, [activeConversationId, navigate])
 
   const onClearRef = () => {
@@ -50,7 +49,6 @@ const Conversations = () => {
       <div className="w-1/4 border-r border-gray-200 overflow-scroll">
         {Object.values(conversations).map((conversation) => {
           const conv_user = users[conversation.participant]
-          const { participant } = conversation
           return (
             <ConversationItem
               user={conv_user}

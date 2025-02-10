@@ -27,7 +27,7 @@ export const isContentEmpty = (html: string) => {
 
 export const handleInput = (
   event: React.FormEvent<HTMLDivElement>,
-  onChange
+  onChange: (element: string) => void
 ) => {
   const element = event.currentTarget
   onChange(element.innerHTML)

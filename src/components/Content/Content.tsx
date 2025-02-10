@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { CreateMessageType, ReplyType } from '../../typings/typings'
 import { isContentEmpty } from '../../utils'
@@ -12,7 +12,6 @@ export const Reply: React.FC<ReplyType> = ({
   last_name,
   avatar,
   content,
-  timestamp,
   style,
   fontSize,
   likes,

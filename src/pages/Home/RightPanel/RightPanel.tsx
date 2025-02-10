@@ -1,9 +1,11 @@
 import React from 'react'
+import { RightPanelFeed } from '../../../typings/typings'
+import RecentChats from './RecentChats'
 
-const RightPanel = () => {
+const RightPanel: React.FC<RightPanelFeed> = ({ conversations, users }) => {
   return (
     <div className="w-1/5">
-      <div className="">Right</div>
+      <RecentChats conversations={conversations} users={users} />
     </div>
   )
 }

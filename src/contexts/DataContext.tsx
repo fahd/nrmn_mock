@@ -118,7 +118,6 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
     content: React.RefObject<HTMLDivElement>,
     user_id: number
   ) => {
-    console.log('submitting')
     setData((prevData) => {
       const timestamp = new Date().toISOString()
       const updatedConversation = {
