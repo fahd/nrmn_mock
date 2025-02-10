@@ -46,7 +46,7 @@ const Conversations = () => {
 
   return (
     <div className="flex flex-1 h-[calc(100vh-4rem)]">
-      <div className="w-1/4 border-r border-gray-200 overflow-y-auto">
+      <div className="w-1/6 md:w-1/8 lg:w-1/4 border-r border-gray-200 overflow-y-auto">
         {Object.values(conversations).map((conversation) => {
           const conv_user = users[conversation.participant]
           return (

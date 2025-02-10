@@ -22,6 +22,8 @@ const Post: React.FC<PostType> = ({
 
   const postReplies = replies[post_id]
 
+  console.log(postReplies)
+
   const renderPostReplies = () => {
     return postReplies.map((reply) => {
       return (

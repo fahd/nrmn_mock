@@ -1,24 +1,9 @@
 export default {
-  '1': [
-    {
-      post_id: 1,
-      reply_id: 1,
-      user_id: 10,
-      username: 'DrElenaPetrovic',
-      first_name: 'Elena',
-      last_name: 'Petrovic',
-      avatar: '/public/assets/users/10.jpg',
-      role: 'mentor',
-      content:
-        "<p>Great topic! I've used ARIMA extensively in my research.</p> <p>Would you be interested in exploring hybrid approaches, such as combining ARIMA with LSTMs?</p>",
-      timestamp: '2025-01-28T11:15:00Z',
-      likes: {},
-    },
-  ],
+  '1': null,
   '2': [
     {
       post_id: 2,
-      reply_id: 2,
+      reply_id: 1,
       user_id: 9,
       username: 'ProfRahulDeshmukh',
       first_name: 'Rahul',
@@ -34,7 +19,7 @@ export default {
   '3': [
     {
       post_id: 3,
-      reply_id: 3,
+      reply_id: 2,
       user_id: 8,
       username: 'DrTatianaOrlova',
       first_name: 'Tatiana',
@@ -50,7 +35,7 @@ export default {
   '4': [
     {
       post_id: 4,
-      reply_id: 4,
+      reply_id: 3,
       user_id: 7,
       username: 'ProfYusufAbdelaziz',
       first_name: 'Yusuf',
@@ -66,7 +51,7 @@ export default {
   '5': [
     {
       post_id: 5,
-      reply_id: 5,
+      reply_id: 4,
       user_id: 6,
       username: 'DrAnayaMendoza',
       first_name: 'Anaya',
@@ -82,7 +67,7 @@ export default {
   '6': [
     {
       post_id: 6,
-      reply_id: 6,
+      reply_id: 5,
       user_id: 5,
       username: 'DrKojiTanaka',
       first_name: 'Koji',
@@ -98,7 +83,7 @@ export default {
   '7': [
     {
       post_id: 7,
-      reply_id: 7,
+      reply_id: 6,
       user_id: 4,
       username: 'DrNaimaRahmani',
       first_name: 'Naima',
@@ -114,7 +99,7 @@ export default {
   '8': [
     {
       post_id: 8,
-      reply_id: 8,
+      reply_id: 7,
       user_id: 6,
       username: 'DrAnayaMendoza',
       first_name: 'Anaya',
@@ -130,7 +115,7 @@ export default {
   '9': [
     {
       post_id: 9,
-      reply_id: 9,
+      reply_id: 8,
       user_id: 7,
       username: 'ProfYusufAbdelaziz',
       first_name: 'Yusuf',
@@ -144,7 +129,7 @@ export default {
     },
     {
       post_id: 9,
-      reply_id: 10,
+      reply_id: 9,
       user_id: 9,
       username: 'ProfRahulDeshmukh',
       first_name: 'Rahul',
@@ -157,5 +142,20 @@ export default {
       likes: { 2: true, 3: true, 4: true },
     },
   ],
-  '10': null,
+  '10': [
+    {
+      post_id: 10,
+      reply_id: 10,
+      user_id: 9,
+      username: 'ProfRahulDeshmukh',
+      first_name: 'Rahul',
+      last_name: 'Deshmukh',
+      avatar: '/public/assets/users/9.jpg',
+      role: 'mentor',
+      content:
+        '<p>In my work on biodiversity modeling, we’ve experimented with multi-scale feature extraction to improve classification accuracy in datasets with high variability—something that might be applicable to your histopathology images.</p><br/><p>One strategy that has worked well for us is using attention mechanisms to highlight critical regions in image data. Have you explored transformer-based models for improving interpretability in your CNN pipeline?</p>',
+      timestamp: '2025-02-10T14:20:00Z',
+      likes: { 1: true, 3: true, 4: true },
+    },
+  ],
 }

@@ -26,7 +26,9 @@ const ConnectUser: React.FC<{ user: User }> = ({ user }) => {
         </div>
         <div className="flex flex-col flex-1">
           <div className="text-link font-semibold flex-1">
-            {user.first_name} {user.last_name}
+            <Link to={`user/${user.user_id}`}>
+              {user.first_name} {user.last_name}
+            </Link>
           </div>
           <div className="text-slate-400 text-sm">{user.university}</div>
           <div className="flex mt-2">

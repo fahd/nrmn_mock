@@ -14,9 +14,9 @@ export default {
     areas_of_focus: ['Biomedical Science', 'Public Health'],
     badge: 120,
     about: `
-		<p>Frank Sheikh is a human person.</p>
+		<p>Frank Sheikh is a person.</p>
 		<br/>
-		<p>Frank enjoys quiet settings and doing good things.</p>
+		<p>Frank enjoys pastoral settings, and is very tired. He also codes a lot.</p>
 	  `,
   },
 
