@@ -9,12 +9,4 @@ export default defineConfig({
     react({ babel: { plugins: ['babel-plugin-styled-components'] } }),
     tailwindcss(),
   ],
-  esbuild: {
-    tsconfigRaw: {
-      compilerOptions: {
-        noEmit: true,
-        skipLibCheck: true,
-      },
-    },
-  },
 })
