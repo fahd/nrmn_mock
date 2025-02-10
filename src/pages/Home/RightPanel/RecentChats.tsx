@@ -47,7 +47,7 @@ const Chat: React.FC<Conversation> = ({
 
 const RecentChats: React.FC<RecentChatsType> = ({ conversations, users }) => {
   const renderChats = () => {
-    return conversations.map((conversation) => {
+    return conversations.slice(0, 5).map((conversation) => {
       return (
         <Chat
           {...conversation}

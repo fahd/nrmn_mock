@@ -52,7 +52,7 @@ const Conversations = () => {
           return (
             <ConversationItem
               user={conv_user}
-              key={conversation.timestamp}
+              key={conversation.conversation_id}
               conversation={conversation}
               onChangeConversation={onChangeConversation}
               activeConversationId={activeConversationId}
