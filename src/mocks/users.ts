@@ -14,9 +14,9 @@ export default {
     areas_of_focus: ['Biomedical Science', 'Public Health'],
     badge: 120,
     about: `
-		<p>Frank Sheikh is a person.</p>
+		<p>Frank Sheikh is a software engineer with an interest in medicine and biomedical sciences.</p>
 		<br/>
-		<p>Frank enjoys pastoral settings, and is very tired. He also codes a lot.</p>
+		<p>Outside of work, Frank enjoys pastoral settings and volunteering in his community in faith-based initiatives.</p>
 	  `,
   },
 
