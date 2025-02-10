@@ -23,9 +23,7 @@ export const Reply: React.FC<ReplyType> = ({
   }
   const likesCount = Object.keys(likes).length
   const hasLiked = likes.hasOwnProperty(me)
-  const imgUrl = hasLiked
-    ? '/public/icons/upvote-colored.svg'
-    : '/public/icons/upvote.svg'
+  const imgUrl = hasLiked ? '/icons/upvote-colored.svg' : '/icons/upvote.svg'
 
   return (
     <div className={`flex bg-white ${style ? style : ''}`}>

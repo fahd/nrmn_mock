@@ -8,7 +8,7 @@ export default {
       username: 'ProfRahulDeshmukh',
       first_name: 'Rahul',
       last_name: 'Deshmukh',
-      avatar: '/public/assets/users/9.jpg',
+      avatar: '/assets/users/9.jpg',
       role: 'mentor',
       content:
         "<p>Interesting question! I've seen some promising work in integrating logic-based reasoning into deep learning models.</p> <p>Do you have any thoughts on how these hybrid models handle uncertainty?</p>",
@@ -24,7 +24,7 @@ export default {
       username: 'DrTatianaOrlova',
       first_name: 'Tatiana',
       last_name: 'Orlova',
-      avatar: '/public/assets/users/8.jpg',
+      avatar: '/assets/users/8.jpg',
       role: 'mentor',
       content:
         '<p>I recommend checking out the Global Biodiversity Information Facility (GBIF).</p> <p>It provides a wealth of publicly available biodiversity data.</p>',
@@ -40,7 +40,7 @@ export default {
       username: 'ProfYusufAbdelaziz',
       first_name: 'Yusuf',
       last_name: 'Abdelaziz',
-      avatar: '/public/assets/users/7.jpg',
+      avatar: '/assets/users/7.jpg',
       role: 'mentor',
       content:
         '<p>One effective method is collaborating with policy think tanks.</p> <p>They help bridge the gap between research and policy implementation.</p>',
@@ -56,7 +56,7 @@ export default {
       username: 'DrAnayaMendoza',
       first_name: 'Anaya',
       last_name: 'Mendoza',
-      avatar: '/public/assets/users/6.jpg',
+      avatar: '/assets/users/6.jpg',
       role: 'mentor',
       content:
         '<p>Look into the NIH and Marie Curie fellowships.</p> <p>They have great funding opportunities for neuroscience research.</p>',
@@ -72,7 +72,7 @@ export default {
       username: 'DrKojiTanaka',
       first_name: 'Koji',
       last_name: 'Tanaka',
-      avatar: '/public/assets/users/5.jpg',
+      avatar: '/assets/users/5.jpg',
       role: 'mentor',
       content:
         "<p>Strogatz's 'Nonlinear Dynamics and Chaos' is an excellent choice.</p> <p>It's both comprehensive and beginner-friendly.</p>",
@@ -88,7 +88,7 @@ export default {
       username: 'DrNaimaRahmani',
       first_name: 'Naima',
       last_name: 'Rahmani',
-      avatar: '/public/assets/users/4.jpg',
+      avatar: '/assets/users/4.jpg',
       role: 'mentor',
       content:
         '<p>I recommend using PyMC3 for Bayesian modeling.</p> <p>It has a great suite of tools for MCMC methods.</p>',
@@ -104,7 +104,7 @@ export default {
       username: 'DrAnayaMendoza',
       first_name: 'Anaya',
       last_name: 'Mendoza',
-      avatar: '/public/assets/users/6.jpg',
+      avatar: '/assets/users/6.jpg',
       role: 'mentor',
       content:
         "<p>Fascinating research, Dr. Rahmani! How does your approach compare with Shor's error correction algorithm?</p>",
@@ -120,7 +120,7 @@ export default {
       username: 'ProfYusufAbdelaziz',
       first_name: 'Yusuf',
       last_name: 'Abdelaziz',
-      avatar: '/public/assets/users/7.jpg',
+      avatar: '/assets/users/7.jpg',
       role: 'mentor',
       content:
         "<p>Great question! One key element is a **clear problem statement**. If you can articulate the research problem in two concise sentences, you're on the right track.</p>",
@@ -134,7 +134,7 @@ export default {
       username: 'ProfRahulDeshmukh',
       first_name: 'Rahul',
       last_name: 'Deshmukh',
-      avatar: '/public/assets/users/9.jpg',
+      avatar: '/assets/users/9.jpg',
       role: 'mentor',
       content:
         "<p>I'd recommend including a **strong methodology section** that explicitly outlines data collection and analysis techniques.</p>",
@@ -150,7 +150,7 @@ export default {
       username: 'ProfRahulDeshmukh',
       first_name: 'Rahul',
       last_name: 'Deshmukh',
-      avatar: '/public/assets/users/9.jpg',
+      avatar: '/assets/users/9.jpg',
       role: 'mentor',
       content:
         '<p>In my work on biodiversity modeling, we’ve experimented with multi-scale feature extraction to improve classification accuracy in datasets with high variability—something that might be applicable to your histopathology images.</p><br/><p>One strategy that has worked well for us is using attention mechanisms to highlight critical regions in image data. Have you explored transformer-based models for improving interpretability in your CNN pipeline?</p>',

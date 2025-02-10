@@ -37,7 +37,7 @@ const NavMessages: React.FC = () => {
   return (
     <div className="px-2">
       <Link to="/messaging">
-        <img src="/public/icons/message.svg" alt="See All Conversations" />
+        <img src="/icons/message.svg" alt="See All Conversations" />
       </Link>
     </div>
   )
@@ -74,7 +74,7 @@ const Navbar = () => {
       <div className="flex-1 flex justify-between">
         <div>
           <Link to="/">
-            <img src="/public/icons/logo-light.png" alt="" />
+            <img src="/icons/logo-light.png" alt="" />
           </Link>
         </div>
         <div className="flex items-center">

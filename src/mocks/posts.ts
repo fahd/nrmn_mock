@@ -5,7 +5,7 @@ export default {
     username: 'DrMateoSilva',
     first_name: 'Mateo',
     last_name: 'Silva',
-    avatar: '/public/assets/users/11.jpg',
+    avatar: '/assets/users/11.jpg',
     role: 'mentor',
     content: `<p>Comparing econometric methods for time series forecasting</p> 
 		<br/>
@@ -18,7 +18,7 @@ export default {
     username: 'DrElenaPetrovic',
     first_name: 'Elena',
     last_name: 'Petrovic',
-    avatar: '/public/assets/users/10.jpg',
+    avatar: '/assets/users/10.jpg',
     role: 'mentor',
     content:
       "<p>Are neural-symbolic hybrid models the future of AI?</p><br/> <p>I've been exploring neural-symbolic AI, which combines deep learning with logical reasoning.</p>",
@@ -30,7 +30,7 @@ export default {
     username: 'ProfRahulDeshmukh',
     first_name: 'Rahul',
     last_name: 'Deshmukh',
-    avatar: '/public/assets/users/9.jpg',
+    avatar: '/assets/users/9.jpg',
     role: 'mentor',
     content:
       '<p>Looking for a dataset on global biodiversity loss</p><br/> <p>I’m currently working on a large-scale meta-analysis of biodiversity trends over the past 50 years.</p>',
@@ -42,7 +42,7 @@ export default {
     username: 'DrTatianaOrlova',
     first_name: 'Tatiana',
     last_name: 'Orlova',
-    avatar: '/public/assets/users/8.jpg',
+    avatar: '/assets/users/8.jpg',
     role: 'mentor',
     content:
       '<p>Challenges in translating research into policy</p> <br/><p>How do you ensure your research influences policymakers effectively?</p>',
@@ -54,7 +54,7 @@ export default {
     username: 'ProfYusufAbdelaziz',
     first_name: 'Yusuf',
     last_name: 'Abdelaziz',
-    avatar: '/public/assets/users/7.jpg',
+    avatar: '/assets/users/7.jpg',
     role: 'mentor',
     content:
       '<p>Tips for securing a postdoc in computational neuroscience?</p> <br/><p>Any advice on strong programs, funding opportunities, or application tips?</p>',
@@ -66,7 +66,7 @@ export default {
     username: 'DrAnayaMendoza',
     first_name: 'Anaya',
     last_name: 'Mendoza',
-    avatar: '/public/assets/users/6.jpg',
+    avatar: '/assets/users/6.jpg',
     role: 'mentor',
     content:
       "<p>Best reference books for understanding nonlinear dynamics?</p> <br/><p>I'm preparing a lecture series and need some high-quality resources.</p>",
@@ -78,7 +78,7 @@ export default {
     username: 'DrKojiTanaka',
     first_name: 'Koji',
     last_name: 'Tanaka',
-    avatar: '/public/assets/users/5.jpg',
+    avatar: '/assets/users/5.jpg',
     role: 'mentor',
     content:
       '<p>Need help with Bayesian statistics in social sciences</p><br/> <p>Any experts in Bayesian modeling willing to provide guidance?</p>',
@@ -90,7 +90,7 @@ export default {
     username: 'DrNaimaRahmani',
     first_name: 'Naima',
     last_name: 'Rahmani',
-    avatar: '/public/assets/users/4.jpg',
+    avatar: '/assets/users/4.jpg',
     role: 'mentor',
     content:
       "<p>Breakthrough in Quantum Computing!</p> <br/><p>My team has recently published a paper on error correction in quantum circuits. This could significantly improve the stability of quantum processors in real-world applications.</p><br/> <p>Check out our findings here: <br/><a href='#'>Quantum Error Correction Research</a>. Would love to hear feedback from fellow quantum researchers!</p>",
@@ -102,7 +102,7 @@ export default {
     username: 'ProfLorenzoFerraro',
     first_name: 'Lorenzo',
     last_name: 'Ferraro',
-    avatar: '/public/assets/users/3.jpg',
+    avatar: '/assets/users/3.jpg',
     role: 'mentor',
     content:
       "<p>What are the best practices for structuring a research proposal?</p><br/> <p>I am mentoring graduate students who are drafting their first <em>research proposals</em>. What are some key elements that should be included? What resources do you recommend?</p> <br/><p>For reference, I often suggest reading <a href='#'>this guide on proposal writing</a>, but I would love to hear insights from the community.</p>",
@@ -114,7 +114,7 @@ export default {
     username: 'DrMiriamKovács',
     first_name: 'Miriam',
     last_name: 'Kovács',
-    avatar: '/public/assets/users/2.jpg',
+    avatar: '/assets/users/2.jpg',
     role: 'mentor',
     content:
       "<p>Exciting opportunity for collaboration!</p><br/> <p>I am currently conducting research on the application of machine learning in early cancer detection. Specifically, I am working with <em>convolutional neural networks (CNNs)</em> to analyze histopathological images for early signs of malignancy.</p><br/> <p>I would love to connect with researchers who have experience with biomedical imaging, deep learning, or clinical applications. If you’re working on something similar, let’s discuss potential collaborations!</p> <br/><p>Reference Papers: <a href='#'>Deep Learning in Cancer Imaging</a></p>",
