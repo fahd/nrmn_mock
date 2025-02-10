@@ -9,4 +9,8 @@ export default defineConfig({
     react({ babel: { plugins: ['babel-plugin-styled-components'] } }),
     tailwindcss(),
   ],
+  base: '/',
+  server: {
+    historyApiFallback: true,
+  },
 })
