@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { RecentChatsType, Conversation } from '../../../typings/typings'
+import { upperCase } from '../../../utils'
 
 const Chat: React.FC<Conversation> = ({
   last_message,
@@ -12,15 +13,18 @@ const Chat: React.FC<Conversation> = ({
       <Link to={`/messaging/?conversation=${conversation_id}`}>
         <div className="flex truncate justify-start">
           <img
-            className="rounded-full w-[25px] h-[25px] mr-3"
+            className="rounded-full w-[25px] h-[25px] mr-3 mt-[5px]"
             src={user.avatar}
             alt={user.username}
           />
 
           <div>
             <div>
-              <p className="font-semibold">
-                {user.first_name} {user.last_name}
+              <p className="font-normal text-link">
+                {user.first_name} {user.last_name},{' '}
+                <span className="text-sm text-slate-400">
+                  {upperCase(user.role)}
+                </span>
               </p>
             </div>
             <p
@@ -51,9 +55,12 @@ const RecentChats: React.FC<RecentChatsType> = ({ conversations, users }) => {
   return (
     <div className="bg-white border border-gray-200 py-4">
       <div className="text-link font-semibold text-lg mb-2 px-6">
-        Recent Chats
+        My Connections
       </div>
       <div>{renderChats()}</div>
+      <div className="pt-2 text-link text-md px-6 font-semibold">
+        <Link to="/messaging">View More</Link>
+      </div>
     </div>
   )
 }

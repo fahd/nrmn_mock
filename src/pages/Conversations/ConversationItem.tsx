@@ -27,7 +27,7 @@ const ConversationItem: React.FC<ConversationItemType> = ({
 
           <div>
             <div>
-              <p className="font-semibold">
+              <p className="font-semibold text-slate-700">
                 {user.first_name} {user.last_name}
               </p>
               <div className="text-slate-500 text-xs">

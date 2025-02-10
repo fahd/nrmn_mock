@@ -70,6 +70,7 @@ export const CreateMessage: React.FC<CreateMessageType> = ({
   placeholder,
   styles,
   onEnterSubmit,
+  type,
 }) => {
   const handleInput = (event: React.FormEvent<HTMLDivElement>) => {
     const element = event.currentTarget
@@ -84,10 +85,12 @@ export const CreateMessage: React.FC<CreateMessageType> = ({
   }
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
-    if (event.key === 'Enter' && !event.shiftKey) {
-      event.preventDefault()
-      if (onEnterSubmit) {
-        onEnterSubmit()
+    if (type === 'conversation') {
+      if (event.key === 'Enter' && !event.shiftKey) {
+        event.preventDefault()
+        if (onEnterSubmit) {
+          onEnterSubmit()
+        }
       }
     }
   }

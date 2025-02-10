@@ -58,7 +58,7 @@ body {
 }
 
 #root {
-  display: flex;
+  /* display: flex; */
   background-color: var(--color-gray-50);
   min-height: 100%;
   overflow: auto;
@@ -68,6 +68,9 @@ body {
 @theme {
   --color-link: #23ccef;
   --color-submit: #447df7;
+  --color-navbar: #313a46;
+  --color-navlink: #98a6ad;
+  --color-schedule: #ffa534;
   --font-fakt: 'FaktPro', sans-serif;
 }
 

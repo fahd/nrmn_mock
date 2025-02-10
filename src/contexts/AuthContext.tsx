@@ -1,12 +1,6 @@
 import { createContext, useState, ReactNode } from 'react'
 import mock_db from '../mocks/mock_db'
-
-interface User {
-  user_id: number
-  username: string
-  email: string
-  avatar: string
-}
+import { User } from '../typings/typings'
 
 interface AuthContextType {
   user: User

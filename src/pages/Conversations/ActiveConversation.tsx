@@ -85,7 +85,7 @@ const ActiveConversation: React.FC<ActiveConversationType> = ({
             placeholder={'Enter a new message here'}
             onChange={setMessageContent}
             contentRef={contentRef}
-            type="post"
+            type="conversation"
           />
         </div>
       </div>

@@ -4,7 +4,7 @@ import RecentChats from './RecentChats'
 
 const RightPanel: React.FC<RightPanelFeed> = ({ conversations, users }) => {
   return (
-    <div className="w-1/5">
+    <div className="w-1/4">
       <RecentChats conversations={conversations} users={users} />
     </div>
   )

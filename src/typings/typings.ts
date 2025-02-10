@@ -85,9 +85,17 @@ export interface User {
   state?: string
   university?: string
   title?: string
-  badge?: number
+  badge: number
   areas_of_focus?: string[]
   about?: React.RefObject<HTMLDivElement>
+}
+
+export interface NavUserType {
+  first_name: string
+  last_name: string
+  avatar: string
+  user_id: number
+  username: string
 }
 
 export interface Message {
