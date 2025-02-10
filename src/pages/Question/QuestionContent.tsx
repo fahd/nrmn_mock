@@ -1,6 +1,7 @@
 import React from 'react'
 import { upperCase, formatDate } from '../../utils'
 import { QuestionContentType } from '../../typings/typings'
+import { Link } from 'react-router-dom'
 
 const QuestionContent: React.FC<QuestionContentType> = ({
   avatar,
@@ -11,6 +12,7 @@ const QuestionContent: React.FC<QuestionContentType> = ({
   timestamp,
   username,
   role,
+  user_id,
 }) => {
   return (
     <div className="bg-white">
@@ -24,7 +26,9 @@ const QuestionContent: React.FC<QuestionContentType> = ({
             />
             <div className=" ml-4">
               <div className="font-semibold text-link">
-                {first_name} {last_name}
+                <Link to={`/user/${user_id}`}>
+                  {first_name} {last_name}
+                </Link>
               </div>
               <div className="text-gray-400 text-sm">{upperCase(role)}</div>
               <div className="text-gray-400 text-xs">
@@ -34,7 +38,7 @@ const QuestionContent: React.FC<QuestionContentType> = ({
           </div>
           <div className="py-12 flex items-center flex-1">
             <p
-              className="pb-4 text-xl"
+              className="pb-4 text-xl text-slate-700"
               dangerouslySetInnerHTML={{ __html: content }}
             />
           </div>

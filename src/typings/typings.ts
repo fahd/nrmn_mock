@@ -6,6 +6,7 @@ export interface QuestionContentType {
   last_name: string
   timestamp: string
   username: string
+  user_id: number
   role: string
 }
 
@@ -49,7 +50,7 @@ export interface PostType {
   avatar: string
   content: string
   timestamp: string
-  user: UserType
+  user: User
   replies: ReplyType[]
   role: string
   likes: {
@@ -65,21 +66,18 @@ export interface User {
   email?: string
   avatar: string
   role: string
-}
-
-export interface UserType {
-  user_id: number
-  username: string
-  first_name: string
-  last_name: string
-  email: string
-  avatar: string
-  role: string
+  city?: string
+  state?: string
+  university?: string
+  title?: string
+  badge?: number
+  areas_of_focus?: string[]
+  about?: React.RefObject<HTMLDivElement>
 }
 
 export interface PostFeedProps {
   posts: PostType[]
-  user: UserType
+  user: User
 }
 
 export interface CreateMessageType {
@@ -88,6 +86,7 @@ export interface CreateMessageType {
   onChange: (content: string) => void // Updated from setPostContent
   placeholder: string
   type: string
+  styles?: string
 }
 
 export interface QuestionAnswerType {
@@ -100,6 +99,7 @@ export interface QuestionAnswerType {
 export interface DataContextType {
   posts: PostType[]
   replies: ReplyType[]
+  users: User[]
   addPost: (newPost: PostType) => void
   addReply: (
     post_id: number,

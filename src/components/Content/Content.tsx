@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { CreateMessageType, ReplyType } from '../../typings/typings'
 import { isContentEmpty } from '../../utils'
 
@@ -36,10 +37,12 @@ export const Reply: React.FC<ReplyType> = ({
       />
       <div className="ml-2 mb-2 flex flex-col">
         <div className="text-link font-semibold">
-          {first_name} {last_name}
+          <Link to={`/user/${user_id}`}>
+            {first_name} {last_name}
+          </Link>
         </div>
         <p
-          className={`pb-1 ${fontSize}`}
+          className={`pb-1 text-slate-700 ${fontSize}`}
           dangerouslySetInnerHTML={{ __html: content }}
         />
         <div
@@ -67,6 +70,7 @@ export const CreateMessage: React.FC<CreateMessageType> = ({
   onChange,
   placeholder,
   type,
+  styles,
 }) => {
   const handleInput = (event: React.FormEvent<HTMLDivElement>) => {
     const element = event.currentTarget
@@ -84,8 +88,18 @@ export const CreateMessage: React.FC<CreateMessageType> = ({
       ref={contentRef}
       contentEditable
       onInput={handleInput}
-      className="w-full p-2 focus:outline-none text-gray-700 placeholder
-      resize-none overflow-hidden text-xl"
+      className={`
+        w-full 
+        p-2 
+        focus:outline-none 
+        text-gray-700 
+        placeholder 
+        resize-none 
+        overflow-hidden 
+        text-xl 
+        border-gray-200
+        ${styles}
+      `}
       style={{ minHeight: '40px', lineHeight: '1.5' }}
       placeholder={placeholder}
     ></div>

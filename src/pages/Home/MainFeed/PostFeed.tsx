@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
 import {
   PostType,
-  UserType,
+  User,
   ReplyType,
   PostFeedProps,
 } from '../../../typings/typings'
@@ -55,7 +55,9 @@ const Post: React.FC<PostType> = ({
 
         <div className="flex ml-2 flex-col">
           <div className="font-semibold text-link">
-            {first_name} {last_name}
+            <Link to={`/user/${user_id}`}>
+              {first_name} {last_name}
+            </Link>
           </div>
           <div className="font-normal text-gray-400">
             {formatDate(timestamp)}
@@ -63,7 +65,7 @@ const Post: React.FC<PostType> = ({
         </div>
       </div>
       <p
-        className="py-4 text-md"
+        className="py-4 text-md text-slate-700"
         dangerouslySetInnerHTML={{ __html: content }}
       />
 

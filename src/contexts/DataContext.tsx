@@ -118,6 +118,7 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
       value={{
         posts: data.posts,
         replies: data.replies,
+        users: data.users,
         addPost,
         addReply,
         likeReply,

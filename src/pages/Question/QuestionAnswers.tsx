@@ -1,4 +1,4 @@
-import React, { useState, useRef, useContext } from 'react'
+import React, { useState, useRef } from 'react'
 import { QuestionAnswerType } from '../../typings/typings'
 import { CreateMessage, Reply } from '../../components/Content/Content'
 import { isContentEmpty } from '../../utils'
@@ -23,7 +23,7 @@ const QuestionAnswers: React.FC<QuestionAnswerType> = ({
         <Reply
           {...replies[replyId]}
           style="p-4 my-4 border-1 border-gray-200"
-          fontSize="text-lg"
+          fontSize="text-md"
           key={replyId}
           me={user.user_id}
           likeReply={likeReply}
@@ -45,7 +45,7 @@ const QuestionAnswers: React.FC<QuestionAnswerType> = ({
   const hasReplies = Boolean(replies)
 
   return (
-    <div className="py-8 m-auto max-w-4xl p-4">
+    <div className="py-8 m-auto max-w-3xl p-4">
       <div>
         <div className="flex items-center">
           <div className="bg-white flex-1 border-sm">
@@ -54,6 +54,7 @@ const QuestionAnswers: React.FC<QuestionAnswerType> = ({
               contentRef={contentRef}
               type="post"
               placeholder={'Reply to this post'}
+              styles="border-gray-200 border-1"
             />
           </div>
         </div>
