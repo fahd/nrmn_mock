@@ -51,13 +51,13 @@ const NavUser: React.FC<NavUserType> = ({
   user_id,
 }) => {
   return (
-    <div className="cursor-pointer">
+    <div>
       <Link to={`/user/${user_id}`}>
-        <div className="flex items-center pr-4">
+        <div className="flex items-center pr-4 cursor-pointer">
           <img
             src={avatar}
             alt={username}
-            className="rounded-full w-[20px] h-[20px] object-cover mx-2"
+            className="rounded-full w-[20px] h-[20px] object-cover mx-2 cursor-pointer"
           />
           <div className="text-navlink font-normal">{first_name}</div>
         </div>
@@ -74,7 +74,11 @@ const Navbar = () => {
       <div className="flex-1 flex justify-between">
         <div>
           <Link to="/">
-            <img src="/icons/logo-light.png" alt="" />
+            <img
+              src="/icons/logo-light.png"
+              alt=""
+              className="cursor-pointer"
+            />
           </Link>
         </div>
         <div className="flex items-center">

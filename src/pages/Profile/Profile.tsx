@@ -31,7 +31,7 @@ const Profile = () => {
   return (
     <div className="flex-1">
       <div className="m-auto max-w-3xl p-4">
-        <div className="flex flex-col py-4 lg:flex-row lg:justify-center lg:items-start items-center">
+        <div className="flex flex-col py-4 lg:flex-row lg:items-start items-center">
           <div>
             <div className="relative">
               <div className="absolute bottom-2 left-0 right-0 flex justify-center items-center">
