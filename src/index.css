@@ -30,7 +30,7 @@
 
 @font-face {
   font-family: 'FaktPro';
-  src: url('/fonts/FaktPro-Semibold.ttf') format('truetype');
+  src: url('/fonts/FaktPro-SemiBold.ttf') format('truetype');
   font-weight: 600; /* Semibold */
   font-style: normal;
 }
