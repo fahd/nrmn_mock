@@ -39,6 +39,7 @@ export interface CreatePostType {
 export interface RightPanelFeed {
   conversations: Conversation[]
   users: User[]
+  user: User
 }
 export interface RecentChatsType {
   conversations: Conversation[]
@@ -181,4 +182,8 @@ export interface ActiveConversationType {
 
 export interface ConversationMessageType {
   conversation: Conversation
+}
+
+export interface ConnectNetworkType {
+  users: User[]
 }

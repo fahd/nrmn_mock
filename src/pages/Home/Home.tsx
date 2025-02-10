@@ -14,7 +14,7 @@ const Home = () => {
         <div className="flex">
           <LeftPanel />
           <MainFeed posts={posts} replies={replies} user={user} />
-          <RightPanel conversations={conversations} users={users} />
+          <RightPanel conversations={conversations} users={users} user={user} />
         </div>
       </div>
     </div>
