@@ -7,7 +7,7 @@ import { faGem, faVideoCamera } from '@fortawesome/free-solid-svg-icons'
 
 const ScheduleLink: React.FC = () => {
   return (
-    <div className="mx-3 text-navlink font-normal text-sm">
+    <div className="hidden lg:block mx-3 text-navlink font-normal text-sm">
       <div className="flex items-center bg-schedule text-white px-4 py-1.5 rounded-sm">
         <FontAwesomeIcon icon={faVideoCamera} className="pr-2" />
         <div>Schedule a Video Call</div>
@@ -17,7 +17,9 @@ const ScheduleLink: React.FC = () => {
 }
 
 const NavLink: React.FC<{ text: string }> = ({ text }) => {
-  return <div className="mx-3 text-navlink font-normal">{text}</div>
+  return (
+    <div className="hidden lg:block mx-3 text-navlink font-normal">{text}</div>
+  )
 }
 
 const NavBadge: React.FC<{ badge: number }> = ({ badge }) => {

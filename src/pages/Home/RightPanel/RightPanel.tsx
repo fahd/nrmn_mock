@@ -15,7 +15,7 @@ const RightPanel: React.FC<RightPanelFeed> = ({
       .slice(0, 5)
   }, [users, me])
   return (
-    <div className="w-1/4">
+    <div className="w-1/4 hidden lg:block">
       <RecentChats conversations={conversations} users={users} />
       <ConnectNetwork users={filteredUsers} />
     </div>

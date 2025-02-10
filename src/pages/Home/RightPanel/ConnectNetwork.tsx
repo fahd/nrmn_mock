@@ -43,7 +43,7 @@ const ConnectUser: React.FC<{ user: User }> = ({ user }) => {
 const ConnectNetwork: React.FC<ConnectNetworkType> = ({ users }) => {
   const renderNetwork = () => {
     return users.map((user, el) => {
-      return <ConnectUser user={user} />
+      return <ConnectUser key={user.user_id} user={user} />
     })
   }
   return (

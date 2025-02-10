@@ -31,7 +31,7 @@ const Profile = () => {
   return (
     <div className="flex-1">
       <div className="m-auto max-w-3xl p-4">
-        <div className="flex py-4">
+        <div className="flex flex-col py-4 lg:flex-row lg:justify-center lg:items-start items-center">
           <div>
             <div className="relative">
               <div className="absolute bottom-2 left-0 right-0 flex justify-center items-center">
@@ -48,7 +48,7 @@ const Profile = () => {
             </div>
           </div>
           <div className="flex pl-8 flex-col">
-            <h1 className="text-2xl font-semibold pb-1">
+            <h1 className="text-2xl font-semibold pb-1 text-center lg:text-left">
               {first_name} {last_name},{' '}
               <small className="text-gray-500 font-normal text-xl">
                 {upperCase(role)}
@@ -69,16 +69,16 @@ const Profile = () => {
                 </div>
               ))}
             </div>
-            <div className="flex my-2 text-slate-700 py-1">
-              <div className="py-1 px-3 border-1 rounded-full border-slate-300 font-semibold mr-2">
+            <div className="flex my-2 text-slate-700 py-1 flex-col lg:flex-row">
+              <div className="py-1 px-3 border-1 rounded-full border-slate-300 font-semibold mr-2 text-center mt-1 lg:mt-0">
                 Connect
               </div>
               {role === 'mentor' && (
-                <div className="py-1 px-3 border-1 rounded-full border-slate-300 font-semibold mr-2">
+                <div className="py-1 px-3 border-1 rounded-full border-slate-300 font-semibold mr-2 text-center mt-1 lg:mt-0">
                   Request Mentoring
                 </div>
               )}
-              <div className="py-1 px-3 border-1 rounded-full border-slate-300 font-semibold mr-2">
+              <div className="py-1 px-3 border-1 rounded-full border-slate-300 font-semibold mr-2 text-center mt-1 lg:mt-0">
                 Ask me a question
               </div>
             </div>

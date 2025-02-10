@@ -97,7 +97,7 @@ const CreatePost: React.FC<CreatePostType> = ({ user }) => {
           />
         </div>
         <button
-          className="flex-1 p-2 bg-white rounded-full border border-gray-300 flex hover:bg-gray-100 transition-all duration-200 cursor-pointer font-normal pl-4 items-center text-gray-500"
+          className="flex-1 bg-white rounded-full border border-gray-300 flex hover:bg-gray-100 transition-all duration-200 cursor-pointer font-normal pl-4 p-1 items-center text-gray-500 text-xs sm:text-md md:text-lg lg:text-lg lg:p-2"
           onClick={() => setIsModalOpen(true)}
         >
           Share your thoughts, projects, ideas with the network

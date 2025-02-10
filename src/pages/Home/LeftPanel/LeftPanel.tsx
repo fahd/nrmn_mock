@@ -3,7 +3,7 @@ import UserResources from './UserResources'
 
 const LeftPanel = () => {
   return (
-    <div className="w-1/5">
+    <div className="hidden w-1/5 lg:block">
       <UserResources />
     </div>
   )
