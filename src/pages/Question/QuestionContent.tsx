@@ -38,7 +38,7 @@ const QuestionContent: React.FC<QuestionContentType> = ({
           </div>
           <div className="py-12 flex items-center flex-1">
             <p
-              className="pb-4 text-lg lg:text-xl text-slate-700"
+              className="pb-4 text-md md:text-lg lg:text-xl text-slate-700"
               dangerouslySetInnerHTML={{ __html: content }}
             />
           </div>

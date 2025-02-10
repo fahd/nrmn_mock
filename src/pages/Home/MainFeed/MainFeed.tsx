@@ -7,7 +7,7 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 
 const MainFeed: React.FC<MainFeedType> = ({ user, posts, replies }) => {
   return (
-    <div className="flex-1 mx-6">
+    <div className="flex-1 sm:mx-1 md:mx-3 lg:mx-6">
       <CreatePost user={user} />
       <PostFeed user={user} posts={posts} />
     </div>

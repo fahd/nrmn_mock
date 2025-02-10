@@ -23,7 +23,7 @@ const QuestionAnswers: React.FC<QuestionAnswerType> = ({
         <Reply
           {...replies[replyId]}
           style="p-4 my-4 border-1 border-gray-200"
-          fontSize="text-md"
+          fontSize="text-sm md:text-lg"
           key={replyId}
           me={user.user_id}
           likeReply={likeReply}

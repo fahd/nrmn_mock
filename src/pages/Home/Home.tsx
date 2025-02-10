@@ -32,7 +32,7 @@ const Home = () => {
               <LoadingSide />
               <LoadingSide />
             </div>
-            <div className="flex-1 mx-6">
+            <div className="flex-1 sm:mx-1 md:mx-3 lg:mx-6">
               <LoadingMainCard />
               <LoadingMainCard />
               <LoadingMainCard />

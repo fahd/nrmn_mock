@@ -36,7 +36,7 @@ const ConversationMessage: React.FC<Message> = ({
             </div>
           </div>
           <div
-            className="py-2 text-slate-700 text-md lg:text-lg"
+            className="py-2 text-slate-700 text-sm lg:text-lg"
             dangerouslySetInnerHTML={{ __html: content }}
           ></div>
         </div>

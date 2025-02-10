@@ -30,7 +30,10 @@ const CreatePostModal: React.FC<ModalProps> = ({ onClose, user }) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 bg-[rgba(0,0,0,0.6)]">
-      <div className="relative bg-white p-6 rounded-lg shadow-lg w-[750px] min-h-[500px] flex flex-col mt-[-30vh]">
+      <div
+        className="
+        relative bg-white p-6 rounded-lg shadow-lg w-[750px] min-h-[500px] flex flex-col md:mt-[-15vh]lg:mt-[-30vh] m-2"
+      >
         <button
           onClick={onClose}
           className="absolute top-3 right-3 px-4 py-2 text-gray-500 hover:text-gray-700 transition cursor-pointer"
@@ -97,7 +100,7 @@ const CreatePost: React.FC<CreatePostType> = ({ user }) => {
           />
         </div>
         <button
-          className="flex-1 bg-white rounded-full border border-gray-300 flex hover:bg-gray-100 transition-all duration-200 cursor-pointer font-normal pl-4 p-1 items-center text-gray-500 text-xs sm:text-md md:text-lg lg:text-lg lg:p-2"
+          className="flex-1 bg-white rounded-full border border-gray-300 flex hover:bg-gray-100 transition-all duration-200 cursor-pointer font-normal pl-4 p-1 items-center text-gray-500 text-xs sm:text-md md:text-lg md:text-lg lg:p-2"
           onClick={() => setIsModalOpen(true)}
         >
           Share your thoughts, projects, ideas with the network
