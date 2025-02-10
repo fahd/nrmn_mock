@@ -1,0 +1,161 @@
+export default {
+  '1': [
+    {
+      post_id: 1,
+      reply_id: 1,
+      user_id: 10,
+      username: 'DrElenaPetrovic',
+      first_name: 'Elena',
+      last_name: 'Petrovic',
+      avatar: '/public/assets/users/10.jpg',
+      role: 'mentor',
+      content:
+        "<p>Great topic! I've used ARIMA extensively in my research.</p> <p>Would you be interested in exploring hybrid approaches, such as combining ARIMA with LSTMs?</p>",
+      timestamp: '2025-01-28T11:15:00Z',
+      likes: {},
+    },
+  ],
+  '2': [
+    {
+      post_id: 2,
+      reply_id: 2,
+      user_id: 9,
+      username: 'ProfRahulDeshmukh',
+      first_name: 'Rahul',
+      last_name: 'Deshmukh',
+      avatar: '/public/assets/users/9.jpg',
+      role: 'mentor',
+      content:
+        "<p>Interesting question! I've seen some promising work in integrating logic-based reasoning into deep learning models.</p> <p>Do you have any thoughts on how these hybrid models handle uncertainty?</p>",
+      timestamp: '2025-01-29T14:00:00Z',
+      likes: {},
+    },
+  ],
+  '3': [
+    {
+      post_id: 3,
+      reply_id: 3,
+      user_id: 8,
+      username: 'DrTatianaOrlova',
+      first_name: 'Tatiana',
+      last_name: 'Orlova',
+      avatar: '/public/assets/users/8.jpg',
+      role: 'mentor',
+      content:
+        '<p>I recommend checking out the Global Biodiversity Information Facility (GBIF).</p> <p>It provides a wealth of publicly available biodiversity data.</p>',
+      timestamp: '2025-01-30T09:20:00Z',
+      likes: {},
+    },
+  ],
+  '4': [
+    {
+      post_id: 4,
+      reply_id: 4,
+      user_id: 7,
+      username: 'ProfYusufAbdelaziz',
+      first_name: 'Yusuf',
+      last_name: 'Abdelaziz',
+      avatar: '/public/assets/users/7.jpg',
+      role: 'mentor',
+      content:
+        '<p>One effective method is collaborating with policy think tanks.</p> <p>They help bridge the gap between research and policy implementation.</p>',
+      timestamp: '2025-02-01T18:10:00Z',
+      likes: {},
+    },
+  ],
+  '5': [
+    {
+      post_id: 5,
+      reply_id: 5,
+      user_id: 6,
+      username: 'DrAnayaMendoza',
+      first_name: 'Anaya',
+      last_name: 'Mendoza',
+      avatar: '/public/assets/users/6.jpg',
+      role: 'mentor',
+      content:
+        '<p>Look into the NIH and Marie Curie fellowships.</p> <p>They have great funding opportunities for neuroscience research.</p>',
+      timestamp: '2025-02-02T12:30:00Z',
+      likes: {},
+    },
+  ],
+  '6': [
+    {
+      post_id: 6,
+      reply_id: 6,
+      user_id: 5,
+      username: 'DrKojiTanaka',
+      first_name: 'Koji',
+      last_name: 'Tanaka',
+      avatar: '/public/assets/users/5.jpg',
+      role: 'mentor',
+      content:
+        "<p>Strogatz's 'Nonlinear Dynamics and Chaos' is an excellent choice.</p> <p>It's both comprehensive and beginner-friendly.</p>",
+      timestamp: '2025-02-03T15:45:00Z',
+      likes: {},
+    },
+  ],
+  '7': [
+    {
+      post_id: 7,
+      reply_id: 7,
+      user_id: 4,
+      username: 'DrNaimaRahmani',
+      first_name: 'Naima',
+      last_name: 'Rahmani',
+      avatar: '/public/assets/users/4.jpg',
+      role: 'mentor',
+      content:
+        '<p>I recommend using PyMC3 for Bayesian modeling.</p> <p>It has a great suite of tools for MCMC methods.</p>',
+      timestamp: '2025-02-04T18:00:00Z',
+      likes: {},
+    },
+  ],
+  '8': [
+    {
+      post_id: 8,
+      reply_id: 8,
+      user_id: 6,
+      username: 'DrAnayaMendoza',
+      first_name: 'Anaya',
+      last_name: 'Mendoza',
+      avatar: '/public/assets/users/6.jpg',
+      role: 'mentor',
+      content:
+        "<p>Fascinating research, Dr. Rahmani! How does your approach compare with Shor's error correction algorithm?</p>",
+      timestamp: '2025-02-05T16:10:00Z',
+      likes: {},
+    },
+  ],
+  '9': [
+    {
+      post_id: 9,
+      reply_id: 9,
+      user_id: 7,
+      username: 'ProfYusufAbdelaziz',
+      first_name: 'Yusuf',
+      last_name: 'Abdelaziz',
+      avatar: '/public/assets/users/7.jpg',
+      role: 'mentor',
+      content:
+        "<p>Great question! One key element is a **clear problem statement**. If you can articulate the research problem in two concise sentences, you're on the right track.</p>",
+      timestamp: '2025-02-06T11:00:00Z',
+      likes: { 1: true, 2: true, 3: true, 4: true, 5: true },
+    },
+    {
+      post_id: 9,
+      reply_id: 10,
+      user_id: 9,
+      username: 'ProfRahulDeshmukh',
+      first_name: 'Rahul',
+      last_name: 'Deshmukh',
+      avatar: '/public/assets/users/9.jpg',
+      role: 'mentor',
+      content:
+        "<p>I'd recommend including a **strong methodology section** that explicitly outlines data collection and analysis techniques.</p>",
+      timestamp: '2025-02-06T11:20:00Z',
+      likes: { 2: true, 3: true, 4: true },
+    },
+  ],
+  '10': null,
+}

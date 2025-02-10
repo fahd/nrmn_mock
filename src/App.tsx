@@ -12,7 +12,7 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/question/:id" element={<Question />}></Route>
         <Route path="/user/:id" element={<Profile />}></Route>
-        <Route path="/conversations/" element={<Conversations />}></Route>
+        <Route path="/messaging/" element={<Conversations />}></Route>
       </Routes>
     </>
   )

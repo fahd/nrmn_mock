@@ -15,9 +15,11 @@ interface AuthContextType {
 export const AuthContext = createContext<AuthContextType | null>(null)
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
-  const [user] = useState<User>(mock_db.auth_user)
+  const [authUser] = useState<User>(mock_db.auth_user)
 
   return (
-    <AuthContext.Provider value={{ user }}>{children}</AuthContext.Provider>
+    <AuthContext.Provider value={{ user: authUser }}>
+      {children}
+    </AuthContext.Provider>
   )
 }

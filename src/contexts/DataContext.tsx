@@ -113,12 +113,56 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
     })
   }
 
+  const addConversationMessage = (
+    conversation_id: string,
+    content: React.RefObject<HTMLDivElement>,
+    user_id: number
+  ) => {
+    console.log('submitting')
+    setData((prevData) => {
+      const timestamp = new Date().toISOString()
+      const updatedConversation = {
+        ...prevData.conversations[conversation_id],
+        messages: [
+          ...prevData.conversations[conversation_id].messages, // Copy previous messages
+          { content, timestamp, user_id }, // Add new message
+        ],
+        last_message: { content, timestamp, user_id }, // Update last message
+      }
+
+      // Create the new state
+      const updatedData = {
+        ...prevData,
+        conversations: {
+          ...prevData.conversations,
+          [conversation_id]: updatedConversation,
+        },
+      }
+
+      localStorage.setItem('data', JSON.stringify(updatedData))
+
+      return updatedData
+    })
+  }
+
+  const getConversations = () => {
+    const latestConversations = Object.values(data.conversations).sort(
+      (a, b) =>
+        new Date(b.last_message.timestamp).getTime() -
+        new Date(a.last_message.timestamp).getTime()
+    )
+
+    return latestConversations
+  }
+
   return (
     <DataContext.Provider
       value={{
         posts: data.posts,
         replies: data.replies,
         users: data.users,
+        conversations: getConversations(),
+        addConversationMessage,
         addPost,
         addReply,
         likeReply,

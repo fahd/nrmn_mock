@@ -69,8 +69,8 @@ export const CreateMessage: React.FC<CreateMessageType> = ({
   contentRef,
   onChange,
   placeholder,
-  type,
   styles,
+  onEnterSubmit,
 }) => {
   const handleInput = (event: React.FormEvent<HTMLDivElement>) => {
     const element = event.currentTarget
@@ -83,11 +83,22 @@ export const CreateMessage: React.FC<CreateMessageType> = ({
     element.style.height = 'auto'
     element.style.height = element.scrollHeight + 'px'
   }
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === 'Enter' && !event.shiftKey) {
+      event.preventDefault()
+      if (onEnterSubmit) {
+        onEnterSubmit()
+      }
+    }
+  }
+
   return (
     <div
       ref={contentRef}
       contentEditable
       onInput={handleInput}
+      onKeyDown={handleKeyDown}
       className={`
         w-full 
         p-2 

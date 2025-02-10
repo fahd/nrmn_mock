@@ -1,0 +1,123 @@
+export default {
+  '1': {
+    post_id: 1,
+    user_id: 11,
+    username: 'DrMateoSilva',
+    first_name: 'Mateo',
+    last_name: 'Silva',
+    avatar: '/public/assets/users/11.jpg',
+    role: 'mentor',
+    content: `<p>Comparing econometric methods for time series forecasting</p> 
+		<br/>
+		<p>I'm trying to compare various econometric models for forecasting long-term financial trends.</p>`,
+    timestamp: '2025-01-28T09:15:00Z',
+  },
+  '2': {
+    post_id: 2,
+    user_id: 10,
+    username: 'DrElenaPetrovic',
+    first_name: 'Elena',
+    last_name: 'Petrovic',
+    avatar: '/public/assets/users/10.jpg',
+    role: 'mentor',
+    content:
+      "<p>Are neural-symbolic hybrid models the future of AI?</p><br/> <p>I've been exploring neural-symbolic AI, which combines deep learning with logical reasoning.</p>",
+    timestamp: '2025-01-29T13:40:00Z',
+  },
+  '3': {
+    post_id: 3,
+    user_id: 9,
+    username: 'ProfRahulDeshmukh',
+    first_name: 'Rahul',
+    last_name: 'Deshmukh',
+    avatar: '/public/assets/users/9.jpg',
+    role: 'mentor',
+    content:
+      '<p>Looking for a dataset on global biodiversity loss</p><br/> <p>I’m currently working on a large-scale meta-analysis of biodiversity trends over the past 50 years.</p>',
+    timestamp: '2025-01-30T08:50:00Z',
+  },
+  '4': {
+    post_id: 4,
+    user_id: 8,
+    username: 'DrTatianaOrlova',
+    first_name: 'Tatiana',
+    last_name: 'Orlova',
+    avatar: '/public/assets/users/8.jpg',
+    role: 'mentor',
+    content:
+      '<p>Challenges in translating research into policy</p> <br/><p>How do you ensure your research influences policymakers effectively?</p>',
+    timestamp: '2025-02-01T16:30:00Z',
+  },
+  '5': {
+    post_id: 5,
+    user_id: 7,
+    username: 'ProfYusufAbdelaziz',
+    first_name: 'Yusuf',
+    last_name: 'Abdelaziz',
+    avatar: '/public/assets/users/7.jpg',
+    role: 'mentor',
+    content:
+      '<p>Tips for securing a postdoc in computational neuroscience?</p> <br/><p>Any advice on strong programs, funding opportunities, or application tips?</p>',
+    timestamp: '2025-02-02T10:55:00Z',
+  },
+  '6': {
+    post_id: 6,
+    user_id: 6,
+    username: 'DrAnayaMendoza',
+    first_name: 'Anaya',
+    last_name: 'Mendoza',
+    avatar: '/public/assets/users/6.jpg',
+    role: 'mentor',
+    content:
+      "<p>Best reference books for understanding nonlinear dynamics?</p> <br/><p>I'm preparing a lecture series and need some high-quality resources.</p>",
+    timestamp: '2025-02-03T14:10:00Z',
+  },
+  '7': {
+    post_id: 7,
+    user_id: 5,
+    username: 'DrKojiTanaka',
+    first_name: 'Koji',
+    last_name: 'Tanaka',
+    avatar: '/public/assets/users/5.jpg',
+    role: 'mentor',
+    content:
+      '<p>Need help with Bayesian statistics in social sciences</p><br/> <p>Any experts in Bayesian modeling willing to provide guidance?</p>',
+    timestamp: '2025-02-04T17:20:00Z',
+  },
+  '8': {
+    post_id: 8,
+    user_id: 4,
+    username: 'DrNaimaRahmani',
+    first_name: 'Naima',
+    last_name: 'Rahmani',
+    avatar: '/public/assets/users/4.jpg',
+    role: 'mentor',
+    content:
+      "<p>Breakthrough in Quantum Computing!</p> <br/><p>My team has recently published a paper on error correction in quantum circuits. This could significantly improve the stability of quantum processors in real-world applications.</p><br/> <p>Check out our findings here: <br/><a href='#'>Quantum Error Correction Research</a>. Would love to hear feedback from fellow quantum researchers!</p>",
+    timestamp: '2025-02-05T15:45:00Z',
+  },
+  '9': {
+    post_id: 9,
+    user_id: 3,
+    username: 'ProfLorenzoFerraro',
+    first_name: 'Lorenzo',
+    last_name: 'Ferraro',
+    avatar: '/public/assets/users/3.jpg',
+    role: 'mentor',
+    content:
+      "<p>What are the best practices for structuring a research proposal?</p><br/> <p>I am mentoring graduate students who are drafting their first <em>research proposals</em>. What are some key elements that should be included? What resources do you recommend?</p> <br/><p>For reference, I often suggest reading <a href='#'>this guide on proposal writing</a>, but I would love to hear insights from the community.</p>",
+    timestamp: '2025-02-06T10:30:00Z',
+  },
+  '10': {
+    post_id: 10,
+    user_id: 2,
+    username: 'DrMiriamKovács',
+    first_name: 'Miriam',
+    last_name: 'Kovács',
+    avatar: '/public/assets/users/2.jpg',
+    role: 'mentor',
+    content:
+      "<p>Exciting opportunity for collaboration!</p><br/> <p>I am currently conducting research on the application of machine learning in early cancer detection. Specifically, I am working with <em>convolutional neural networks (CNNs)</em> to analyze histopathological images for early signs of malignancy.</p><br/> <p>I would love to connect with researchers who have experience with biomedical imaging, deep learning, or clinical applications. If you’re working on something similar, let’s discuss potential collaborations!</p> <br/><p>Reference Papers: <a href='#'>Deep Learning in Cancer Imaging</a></p>",
+    timestamp: '2025-02-07T12:00:00Z',
+  },
+}

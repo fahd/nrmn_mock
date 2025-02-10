@@ -7,6 +7,16 @@ export const formatDate = (isoString: string): string => {
     day: 'numeric', // "7"
   })
 }
+
+export const formatDateToTime = (isoString: string): string => {
+  const date = new Date(isoString)
+  const timeString = date.toLocaleTimeString('en-US', {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true,
+  })
+  return timeString
+}
 export const upperCase = (s: string) => {
   return s[0].toUpperCase() + s.slice(1)
 }

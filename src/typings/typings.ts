@@ -75,6 +75,28 @@ export interface User {
   about?: React.RefObject<HTMLDivElement>
 }
 
+export interface Message {
+  user_id: number
+  content: string
+  timestamp: string
+  read: boolean
+  user: User
+}
+
+export interface LastMessage {
+  user_id: number
+  content: string
+  timestamp: string
+}
+
+export interface Conversation {
+  conversation_id: string
+  participant: number
+  last_message: LastMessage
+  unread_count: number
+  messages: Message[]
+  timestamp: string
+}
 export interface PostFeedProps {
   posts: PostType[]
   user: User
@@ -85,7 +107,7 @@ export interface CreateMessageType {
   setPostContent: (content: string) => void
   onChange: (content: string) => void // Updated from setPostContent
   placeholder: string
-  type: string
+  type?: string
   styles?: string
 }
 
@@ -100,6 +122,7 @@ export interface DataContextType {
   posts: PostType[]
   replies: ReplyType[]
   users: User[]
+  conversations: Conversation[]
   addPost: (newPost: PostType) => void
   addReply: (
     post_id: number,
@@ -107,4 +130,29 @@ export interface DataContextType {
     new_reply: React.RefObject<HTMLDivElement>
   ) => void
   likeReply: (post_id: number, reply_id: number, user_id: number) => void
+  addConversationMessage: (
+    conversation_id: string,
+    content: React.RefObject<HTMLDivElement>,
+    user_id: number
+  ) => void
+}
+
+export interface ConversationItemType {
+  conversation: Conversation
+  user: User
+  activeConversationId: string
+  onChangeConversation: (conversation_id: string) => void
+}
+
+export interface ActiveConversationType {
+  conversation: Conversation
+  me: User
+  users: User[]
+  setMessageContent: () => void
+  onEnterSubmit: () => void
+  contentRef: React.RefObject<HTMLDivElement>
+}
+
+export interface ConversationMessageType {
+  conversation: Conversation
 }
