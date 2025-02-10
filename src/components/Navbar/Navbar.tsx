@@ -51,7 +51,7 @@ const NavUser: React.FC<NavUserType> = ({
   user_id,
 }) => {
   return (
-    <div>
+    <div className="cursor-pointer">
       <Link to={`/user/${user_id}`}>
         <div className="flex items-center pr-4">
           <img
