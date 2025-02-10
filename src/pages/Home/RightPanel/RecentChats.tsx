@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { RecentChatsType, Conversation } from '../../../typings/typings'
-import { upperCase } from '../../../utils'
+import { upperCase, formatDateToTime, formatDateMonthDay } from '../../../utils'
 
 const Chat: React.FC<Conversation> = ({
   last_message,
@@ -26,12 +26,17 @@ const Chat: React.FC<Conversation> = ({
                   {upperCase(user.role)}
                 </span>
               </p>
+              <div className="text-xs text-slate-300">
+                <span>{formatDateMonthDay(last_message.timestamp)}</span>
+                <span className="px-1">•</span>
+                <span>{formatDateToTime(last_message.timestamp)}</span>
+              </div>
             </div>
             <p
               dangerouslySetInnerHTML={{
                 __html: last_message.content,
               }}
-              className="text-gray-600 text-sm truncate"
+              className="text-gray-600 text-sm truncate pt-1"
             ></p>
           </div>
         </div>

@@ -45,8 +45,8 @@ const Conversations = () => {
   }
 
   return (
-    <div className="flex flex-1">
-      <div className="w-1/4 border-r border-gray-200 overflow-scroll">
+    <div className="flex flex-1 h-[calc(100vh-4rem)]">
+      <div className="w-1/4 border-r border-gray-200 overflow-y-auto">
         {Object.values(conversations).map((conversation) => {
           const conv_user = users[conversation.participant]
           return (
@@ -61,7 +61,7 @@ const Conversations = () => {
         })}
       </div>
 
-      <div className="w-3/4 overflow-scroll">
+      <div className="w-3/4 overflow-y-auto">
         {activeConversationId && (
           <ActiveConversation
             conversation={getActiveConversation()}

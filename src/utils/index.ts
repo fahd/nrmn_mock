@@ -17,6 +17,14 @@ export const formatDateToTime = (isoString: string): string => {
   })
   return timeString
 }
+export const formatDateMonthDay = (isoString: string): string => {
+  const date = new Date(isoString)
+  return date.toLocaleDateString('en-US', {
+    month: 'long',
+    day: 'numeric',
+  })
+}
+
 export const upperCase = (s: string) => {
   return s[0].toUpperCase() + s.slice(1)
 }

@@ -7,8 +7,8 @@ import { faGem, faVideoCamera } from '@fortawesome/free-solid-svg-icons'
 
 const ScheduleLink: React.FC = () => {
   return (
-    <div className="mx-3 text-navlink font-normal">
-      <div className="flex items-center bg-schedule text-white px-4 py-1 rounded-sm">
+    <div className="mx-3 text-navlink font-normal text-sm">
+      <div className="flex items-center bg-schedule text-white px-4 py-1.5 rounded-sm">
         <FontAwesomeIcon icon={faVideoCamera} className="pr-2" />
         <div>Schedule a Video Call</div>
       </div>
@@ -31,6 +31,16 @@ const NavBadge: React.FC<{ badge: number }> = ({ badge }) => {
   )
 }
 
+const NavMessages: React.FC = () => {
+  return (
+    <div className="px-2">
+      <Link to="/messaging">
+        <img src="/public/icons/message.svg" alt="See All Conversations" />
+      </Link>
+    </div>
+  )
+}
+
 const NavUser: React.FC<NavUserType> = ({
   first_name,
   last_name,
@@ -40,14 +50,16 @@ const NavUser: React.FC<NavUserType> = ({
 }) => {
   return (
     <div>
-      <div className="flex items-center pr-4">
-        <img
-          src={avatar}
-          alt={username}
-          className="rounded-full w-[20px] h-[20px] object-cover mx-2"
-        />
-        <div className="text-navlink font-normal">{first_name}</div>
-      </div>
+      <Link to={`/user/${user_id}`}>
+        <div className="flex items-center pr-4">
+          <img
+            src={avatar}
+            alt={username}
+            className="rounded-full w-[20px] h-[20px] object-cover mx-2"
+          />
+          <div className="text-navlink font-normal">{first_name}</div>
+        </div>
+      </Link>
     </div>
   )
 }
@@ -56,7 +68,7 @@ const Navbar = () => {
   const { user } = useAuth()
 
   return (
-    <div className="py-5 px-4 bg-navbar flex space-between">
+    <div className="py-5 px-4 bg-navbar flex space-between h-16">
       <div className="flex-1 flex justify-between">
         <div>
           <Link to="/">
@@ -65,6 +77,7 @@ const Navbar = () => {
         </div>
         <div className="flex items-center">
           <ScheduleLink />
+          <NavMessages />
           <NavLink text={'Links'} />
           <NavLink text={'Help Articles'} />
           <NavLink text={'Submit a Ticket'} />
