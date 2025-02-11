@@ -29,7 +29,7 @@ const Post: React.FC<PostType> = ({
           me={user.user_id}
           key={reply.reply_id}
           style="py-1"
-          fontSize="text-sm md:text-lg"
+          fontSize=""
           likeReply={likeReply}
           {...reply}
         />
@@ -60,7 +60,7 @@ const Post: React.FC<PostType> = ({
         </div>
       </div>
       <p
-        className="py-4 text-slate-700 text-sm md:text-lg"
+        className="py-4 text-slate-700"
         dangerouslySetInnerHTML={{ __html: content }}
       />
 
