@@ -54,9 +54,11 @@ const Profile = () => {
                 {upperCase(role)}
               </small>
             </h1>
-            <div className="text-gray-600 text-lg">{university}</div>
+            <div className="text-gray-600 text-lg text-center lg:text-left">
+              {university}
+            </div>
 
-            <div className="text-gray-600 text-md">
+            <div className="text-gray-600 text-md text-center lg:text-left">
               {city}, {state}
             </div>
             <div className="flex mt-2">
