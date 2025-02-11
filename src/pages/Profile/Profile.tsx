@@ -47,7 +47,7 @@ const Profile = () => {
               />
             </div>
           </div>
-          <div className="flex pl-8 flex-col">
+          <div className="flex pl-0 lg:pl-8 flex-col">
             <h1 className="text-2xl font-semibold pb-1 text-center lg:text-left">
               {first_name} {last_name},{' '}
               <small className="text-gray-500 font-normal text-xl">
